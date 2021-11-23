@@ -34,7 +34,9 @@ export default {
     // https://go.nuxtjs.dev/eslint
     // '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    // https://color-mode.nuxtjs.org
+    '@nuxtjs/color-mode'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -48,5 +50,17 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  // TailwindCSS Configuration: https://tailwindcss.com/docs/configuration
+  tailwindcss: {
+    jit: true,
+    // add '~tailwind.config` alias
+    exposeConfig: true
+  },
+
+  // Nuxt Color Mode Configurations: https://color-mode.nuxtjs.org
+  colorMode: {
+    classSuffix: '',
   }
 }

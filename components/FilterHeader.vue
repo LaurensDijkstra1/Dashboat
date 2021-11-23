@@ -1,5 +1,5 @@
 <template>
-  <header class="border border-gray-200 rounded bg-white px-3 py-4 mb-6 flex justify-between">
+  <header class="border border-gray-200 rounded bg-white dark:bg-gray-600 dark:border-none px-3 py-4 mb-6 flex justify-between">
     <section class="flex flex-row items-center space-x-4">
       <p>Scheepshaven</p>
 
@@ -55,18 +55,22 @@
         </div>
       </div>
 
-      <button class="bg-white border-gray-300 focus:border-blue-500 py-1 px-4 border rounded shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50 text-sm border-gray-300 focus:border-blue-500">
+      <t-button class="text-sm" value="primary">
         Reset
-      </button>
+      </t-button>
 
       <t-select
         :options="['In Port - Expected']"
       />
     </section>
 
-    <button class="g-blue-500 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
-      Night Mode
-    </button>
+    <t-button
+      class="font-bold"
+      variant="primary"
+      @click="$colorMode.preference = $colorMode.value === 'light' ? 'dark' : 'light'"
+    >
+      {{ $colorMode.value === 'light' ? 'Night Mode' : 'Day Mode' }}
+    </t-button>
   </header>
 </template>
 
