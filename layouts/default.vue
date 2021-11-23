@@ -1,15 +1,17 @@
 <template lang="html">
   <div class="px-4 py-6">
     <filter-header />
+    <inPort />
 
-    <nuxt />
+    <!-- <nuxt /> -->
   </div>
 </template>
 
 <script lang="js">
 import FilterHeader from '~/components/FilterHeader'
+import InPort from '~/components/InPort'
 export default {
-  components: { FilterHeader },
+  components: { FilterHeader,  InPort},
   head: {
     bodyAttrs: {
       class: 'bg-gray-100 dark:bg-gray-800 dark:text-white'
@@ -18,6 +20,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
