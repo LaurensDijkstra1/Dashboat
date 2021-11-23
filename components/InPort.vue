@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col">
-    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-      <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+  <div class="w-full">
+    <div class="w-full -my-2 overflow-x-auto sm:-mx-2 lg:-mx-2">
+      <div class="w-full py-2 align-middle inline-block sm:px-2 lg:px-2">
         <div
           class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
         >
-          <table class="min-w-full divide-y divide-black-200">
+          <table class="w-full divide-y divide-black-200">
             <thead class="bg-white divide-gray-200 text-left">
               <tr>
                 <th
@@ -34,8 +34,9 @@
                 <th
                   scope="col"
                   class="
-                    px-6
-                    py-3
+                    w-0
+                    px-3
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -48,8 +49,9 @@
                 <th
                   scope="col"
                   class="
-                    px-6
-                    py-3
+                    w-1
+                    px-2
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -62,8 +64,9 @@
                 <th
                   scope="col"
                   class="
-                    px-6
-                    py-3
+                    w-2
+                    px-3
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -76,8 +79,9 @@
                 <th
                   scope="col"
                   class="
-                    px-6
-                    py-3
+                    w-1
+                    px-2
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -90,8 +94,9 @@
                 <th
                   scope="col"
                   class="
-                    px-6
-                    py-3
+                    w-1
+                    px-0
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -104,8 +109,9 @@
                 <th
                   scope="col"
                   class="
+                    w-1
                     px-6
-                    py-3
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -118,8 +124,9 @@
                 <th
                   scope="col"
                   class="
-                    px-6
-                    py-3
+                    w-1
+                    px-0
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -132,8 +139,9 @@
                 <th
                   scope="col"
                   class="
+                    w-1
                     px-6
-                    py-3
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -146,8 +154,9 @@
                 <th
                   scope="col"
                   class="
-                    px-6
-                    py-3
+                    w-1
+                    px-0
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -160,8 +169,9 @@
                 <th
                   scope="col"
                   class="
-                    px-6
-                    py-3
+                    w-1
+                    px-2
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -174,8 +184,9 @@
                 <th
                   scope="col"
                   class="
-                    px-6
-                    py-3
+                    w-1
+                    px-0
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -188,8 +199,9 @@
                 <th
                   scope="col"
                   class="
+                    w-1
                     px-6
-                    py-3
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -202,8 +214,9 @@
                 <th
                   scope="col"
                   class="
-                    px-6
-                    py-3
+                    w-4
+                    px-2
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -216,8 +229,9 @@
                 <th
                   scope="col"
                   class="
+                    w-1
                     px-6
-                    py-3
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -230,8 +244,9 @@
                 <th
                   scope="col"
                   class="
-                    px-6
-                    py-3
+                    w-3
+                    px-0
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -244,8 +259,8 @@
                 <th
                   scope="col"
                   class="
-                    px-6
-                    py-3
+                    px-0
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -258,8 +273,9 @@
                 <th
                   scope="col"
                   class="
+                    w-1
                     px-6
-                    py-3
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -267,16 +283,29 @@
                     tracking-wider
                   "
                 >
-                  -
+                  <span class="material-icons"> track_changes </span>
                 </th>
-                <th scope="col" class="px-6 py-3 text-gray-500 uppercase">
+                <th
+                  scope="col"
+                  class="
+                    w-1
+                    px-0
+                    py-1.5
+                    text-left text-xs
+                    font-medium
+                    text-gray-500
+                    uppercase
+                    tracking-wider
+                  "
+                >
                   <span class="material-icons"> assignment_late </span>
                 </th>
                 <th
                   scope="col"
                   class="
-                    px-6
-                    py-3
+                    w-1
+                    px-4
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -289,8 +318,9 @@
                 <th
                   scope="col"
                   class="
-                    px-6
-                    py-3
+                    w-1
+                    px-0
+                    py-1.5
                     text-left text-xs
                     font-medium
                     text-gray-500
@@ -305,7 +335,7 @@
 
             <tbody class="bg-white divide-y divide-gray-200">
               <tr>
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="w-1 px-3 py-1.5 whitespace-nowrap">
                   <div class="flex items-center">
                     <div class="flex-shrink-0 h-10 w-10">
                       <img
@@ -316,14 +346,15 @@
                     </div>
                   </div>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="w-0 px-2 py-1.5 whitespace-nowrap">
                   <div class="text-sm text-gray-900"><b>08-10 </b></div>
                   <div class="text-sm text-gray-900">17:00</div>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="px-3 py-4 whitespace-nowrap">
                   <span
                     class="
-                      px-2
+                      w-1
+                      px-0
                       inline-flex
                       text-xs
                       leading-5
@@ -336,10 +367,10 @@
                     VVS
                   </span>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <td class="px-2 py-4 whitespace-nowrap text-sm text-gray-500">
                   AUT05
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <td class="px-0 py-4 whitespace-nowrap text-sm text-gray-500">
                   0.0?s
                 </td>
 
@@ -347,7 +378,7 @@
                   <div class="text-sm text-gray-900">-</div>
                 </td>
 
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="px-0 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-900">B</div>
                 </td>
 
@@ -355,15 +386,15 @@
                   <div class="text-sm text-gray-900">-</div>
                 </td>
 
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="px-0 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-900">11.00</div>
                 </td>
 
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="px-3 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-900">3.60</div>
                 </td>
 
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="px-0 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-900">0.80</div>
                 </td>
 
@@ -371,7 +402,7 @@
                   <div class="text-sm text-gray-900">-</div>
                 </td>
 
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="px-2 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-900"><b>04-11</b></div>
                   <div class="text-sm text-gray-900">19:00</div>
                 </td>
@@ -380,11 +411,19 @@
                   <div class="text-sm text-gray-900">DL1HH</div>
                 </td>
 
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="px-0 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-900">??</div>
                 </td>
 
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="w-1 px-1 py-4 whitespace-nowrap">
+                  <div class="text-sm text-gray-900">-</div>
+                </td>
+
+                <td class="px-8 py-4 whitespace-nowrap">
+                  <div class="text-sm text-gray-900">-</div>
+                </td>
+
+                <td class="px-2 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-900">-</div>
                 </td>
 
@@ -392,15 +431,7 @@
                   <div class="text-sm text-gray-900">-</div>
                 </td>
 
-                <td class="px-6 py-4 whitespace-nowrap">
-                  <div class="text-sm text-gray-900">-</div>
-                </td>
-
-                <td class="px-6 py-4 whitespace-nowrap">
-                  <div class="text-sm text-gray-900">-</div>
-                </td>
-
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="px-2 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-900">-</div>
                 </td>
               </tr>

@@ -1,8 +1,10 @@
 <template lang="html">
   <div class="px-4 py-6">
     <filter-header />
-    <inPort />
-
+    <div class="flex">
+      <inPort />
+      <inPort />
+    </div>
     <!-- <nuxt /> -->
   </div>
 </template>
