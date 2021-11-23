@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
-    <div class="w-full -my-2 overflow-x-auto sm:-mx-2 lg:-mx-2">
-      <div class="w-full py-2 align-middle inline-block sm:px-2 lg:px-2">
+    <div class="w-full -my-2 overflow-x-auto sm:-mx-1 lg:-mx-1">
+      <div class="w-full py-2 align-middle inline-block sm:px-1 lg:px-1">
         <div
           class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
         >
