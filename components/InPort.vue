@@ -8,7 +8,22 @@
           <table class="min-w-full divide-y divide-black-200">
             <thead class="bg-white divide-gray-200 text-left">
               <tr>
-                <th><h1>In-port</h1></th>
+                <th
+                  scope="col"
+                  class="
+                    px-6
+                    py-3
+                    text-left
+                    font-bold
+                    text-gray-800
+                    uppercase
+                    tracking-wider
+                  "
+                >
+                  <div>
+                    <h1>In-port</h1>
+                  </div>
+                </th>
               </tr>
             </thead>
           </table>
