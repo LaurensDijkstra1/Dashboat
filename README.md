@@ -1,4 +1,5 @@
-# dashboat
+# Dashboat
+A dashboard for boats.
 
 ## Build Setup
 
