@@ -102,13 +102,13 @@
                                 <td class="px-6 py-4 whitespace-nowrap text-sm">
                                     ???
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                <td class="pl-6 pr-2 py-4 whitespace-nowrap text-sm">
                                     B
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                <td class="px-3 py-4 whitespace-nowrap text-sm">
                                     -
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                <td class="pl-2 pr-6 py-4 whitespace-nowrap text-sm">
                                     P
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm">
