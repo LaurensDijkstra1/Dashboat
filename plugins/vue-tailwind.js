@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueTailwind from 'vue-tailwind'
-import VIcon from 'vue-tailwind-icons';
 
 import {
   TButton,
   TRadio,
   TSelect,
+  TTable
 } from 'vue-tailwind/dist/components'
 
 const settings = {
@@ -54,7 +54,29 @@ const settings = {
       }
     }
   },
+
+  "t-table": {
+    component: TTable,
+    props: {
+      classes: {
+        table:
+          "min-w-full divide-y divide-gray-100 shadow-sm border-gray-200 border",
+        thead: "bg-white divide-gray-200 text-left",
+        theadTr: "",
+        theadTh:
+          "px-3 py-2 font-semibold text-left bg-white dark:bg-gray-600 border-b",
+        tbody: "bg-white divide-y divide-gray-100",
+        th: "px-6 py-3 text-left font-bold text-gray-800 uppercase tracking-wider",
+        tr: "",
+        td: "px-3 py-2 whitespace-no-wrap",
+        tfoot: "",
+        tfootTr: "",
+        tfootTd: "",
+      }
+    }
+  }
 }
 
+
 Vue.use(VueTailwind, settings)
-Vue.use(VIcon)
+
