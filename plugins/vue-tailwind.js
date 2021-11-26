@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueTailwind from 'vue-tailwind'
+import VIcon from 'vue-tailwind-icons';
 
 import {
   TButton,
@@ -56,3 +57,4 @@ const settings = {
 }
 
 Vue.use(VueTailwind, settings)
+Vue.use(VIcon)
