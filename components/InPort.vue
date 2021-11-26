@@ -1,5 +1,162 @@
 <template>
-  <div class="w-full">
+  <div class="w-7/12">
+    <table>
+      <t-table
+        :headers="[
+          {
+            id: 'type',
+            value: 'type',
+            text: 'Type',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'etd',
+            value: 'etd',
+            text: 'ETD',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'Vessel',
+            value: 'Vessel',
+            text: 'Vessel',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'Berth',
+            value: 'Berth',
+            text: 'Berth',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'Mooring',
+            value: 'Mooring',
+            text: 'Mooring',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'B',
+            value: 'B',
+            text: 'B',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'T',
+            value: 't',
+            text: 'T',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'P',
+            value: 'p',
+            text: 'P',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'LOA',
+            value: 'LOA',
+            text: 'LOA',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'BOA',
+            value: 'BOA',
+            text: 'BOA',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'Draft',
+            value: 'Draft',
+            text: 'Draft',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'H',
+            value: 'H',
+            text: 'H',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'ETA',
+            value: 'ETA',
+            text: 'ETA',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'BERTH',
+            value: 'BERTH',
+            text: 'BERTH',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'MOORING',
+            value: 'MOORING',
+            text: 'MOORING',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'ICON',
+            value: 'ICON',
+            text: 'ICON',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'ICON',
+            value: 'ICON',
+            text: 'ICON',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'ICON',
+            value: 'ICON',
+            text: 'ICON',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'ICON',
+            value: 'ICON',
+            text: 'ICON',
+            className: 'bg-grey-100',
+          },
+          {
+            id: 'ICON',
+            value: 'ICON',
+            text: 'ICON',
+            className: 'bg-grey-100',
+          },
+        ]"
+      />
+
+      <t-table
+        :data="[
+          [
+            'Type',
+            'ETD',
+            'Vessel',
+            'Berth',
+            'Mooring',
+            'B',
+            'T',
+            'P',
+            'LOA',
+            'BOA',
+            'Draft',
+            'H',
+            'ETA',
+            'BERTH',
+            'MOORING',
+            'ICON1',
+            'ICON2',
+            'ICON3',
+            'ICON4',
+            'ICON5',
+          ],
+          ['A', '15:00', 'EST', '0.0?'],
+        ]"
+      ></t-table>
+    </table>
+  </div>
+
+  <!-- <div class="w-full">
     <div class="w-full -my-2 overflow-x-auto sm:-mx-1 lg:-mx-1">
       <div class="w-full py-2 align-middle inline-block sm:px-1 lg:px-1">
         <div
@@ -436,11 +593,11 @@
                 </td>
               </tr>
 
-              <!-- More people... -->
+              
             </tbody>
           </table>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>

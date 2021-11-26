@@ -2,20 +2,16 @@
   <div class="px-4 py-6">
     <filter-header />
 
-    <div class="flex justify-center">
-      <expected />
+    <div class="flex">
       <inPort />
+      <!-- <expected /> -->
     </div>
   </div>
 </template>
 
 <script lang="js">
 import FilterHeader from '~/components/FilterHeader'
-<<<<<<< HEAD
 import Expected from '~/components/Expected'
-export default {
-  components: { FilterHeader, Expected},
-=======
 import InPort from '~/components/InPort'
 export default {
   components: { FilterHeader,  InPort},
