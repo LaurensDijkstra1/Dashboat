@@ -24,6 +24,7 @@ export default {
   plugins: [
     // VueTailwind: https://www.vue-tailwind.com
     '~plugins/vue-tailwind',
+    '~/plugins/fontawesome.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
