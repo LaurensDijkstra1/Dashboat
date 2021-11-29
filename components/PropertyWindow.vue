@@ -1,16 +1,35 @@
 <template>
   <div class="w-full">
-    <div class="py-4 px-8 bg-white shadow-lg rounded-t-lg">
+    <div
+      class="
+        py-4
+        px-8
+        bg-white
+        shadow-lg
+        rounded-t-lg
+        dark:bg-gray-800 dark:border-none
+      "
+    >
       <h1>Inland Vessel Visit - Van der Veen shipping - Expected</h1>
     </div>
-    <div class="space-x-4 py-4 px-8 bg-gray-100 flex border border-gray-300">
+    <div
+      class="
+        space-x-4
+        py-4
+        px-8
+        bg-gray-100
+        flex
+        border border-gray-300
+        dark:bg-gray-800 dark:border-none
+      "
+    >
       <t-button variant="primary">Save & Quit </t-button>
       <t-button class="bg-white">Save & New </t-button>
       <t-button class="bg-white">Use Defaults </t-button>
       <t-button class="bg-white">Reset </t-button>
       <t-button class="bg-white">Quit </t-button>
     </div>
-    <div class="py-4 px-8 bg-white">
+    <div class="py-4 px-8 bg-white dark:bg-gray-600 dark:border-none">
       <div class="w-full flex">
         <div class="w-1/12">
           <p class="font-bold mb-6">Vessel</p>
@@ -49,7 +68,7 @@
         <div class="ml-12 w-6/12">
           <h1 class="mb-6">Motorvrachtschip</h1>
           <t-textarea
-            class="h-32"
+            class="h-32 dark:bg-gray-800 dark:border-none"
             placeholder="Pernament ship remarkts "
             name="my-textarea"
           />
@@ -68,7 +87,7 @@
         </div>
         <div class="w-6/12">
           <t-textarea
-            class="ml-6 h-32"
+            class="ml-6 h-32 dark:bg-gray-600 dark:border-none"
             placeholder="Visit remarkts"
             name="my-textarea"
           />

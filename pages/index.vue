@@ -6,6 +6,9 @@
     <div class="w-7/12">
       <propertyWindow />
       <position />
+      <div class="newPostion"></div>
+      <div class="w-full mt-6"></div>
+      <t-button class="m-auto" variant="primary">Add new position </t-button>
     </div>
   </div>
 </template>
