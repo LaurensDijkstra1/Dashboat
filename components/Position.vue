@@ -33,24 +33,32 @@
       <div class="w-4/12 flex">
         <h1 class="mt-2">ETA</h1>
         <t-input
-          class="ml-16 w-full dark:bg-gray-800 dark:border-none"
+          type="datetime-local"
+          class="
+            ml-16
+            w-full
+            dark:bg-gray-800 dark:border-none
+            placeholder-gray-500::placeholder
+            dark:text-gray-400
+          "
           placeholder="dd-mm-yyyy hh-mm"
         />
-        <font-awesome-icon
-          class="ml-4 w-4 text-gray-400"
+        <!-- <font-awesome-icon
+          class="ml-4 w-4 dark:text-gray-400"
           :icon="['fas', 'calendar-alt']"
-        />
+        /> -->
       </div>
       <div class="ml-12 w-3/12 flex">
         <h1 class="mt-2">ETD</h1>
         <t-input
+          type="datetime-local"
           class="ml-6 w-full dark:bg-gray-800 dark:border-none"
           placeholder="dd-mm-yyyy hh-mm"
         />
-        <font-awesome-icon
+        <!-- <font-awesome-icon
           class="ml-6 w-4 text-gray-400"
           :icon="['fas', 'calendar-alt']"
-        />
+        /> -->
       </div>
       <div class="ml-16 w-4/12 flex">
         <t-input
@@ -70,24 +78,26 @@
       <div class="w-4/12 flex">
         <h1 class="mt-2">ATA</h1>
         <t-input
+          type="datetime-local"
           class="ml-16 w-full dark:bg-gray-800 dark:border-none"
           placeholder="ATA"
         />
-        <font-awesome-icon
+        <!-- <font-awesome-icon
           class="ml-4 w-4 text-gray-400"
           :icon="['fas', 'calendar-alt']"
-        />
+        /> -->
       </div>
       <div class="ml-12 w-3/12 flex">
         <h1 class="mt-2">ATD</h1>
         <t-input
+          type="datetime-local"
           class="ml-6 w-full dark:bg-gray-800 dark:border-none"
           placeholder="ATD"
         />
-        <font-awesome-icon
+        <!-- <font-awesome-icon
           class="ml-6 w-4 text-gray-400"
           :icon="['fas', 'calendar-alt']"
-        />
+        /> -->
       </div>
       <div class="ml-16 w-4/12 flex space-x-12">
         <label class="inline-flex items-center">
@@ -116,7 +126,7 @@
       </div>
       <div class="w-3/12 flex"></div>
       <div class="ml-12 w-3/12 flex"></div>
-      <div class="ml-16 w-4/12 flex space-x-12">
+      <div style="padding-left: 4px" class="ml-16 w-4/12 flex space-x-12">
         <label class="inline-flex items-center">
           <input
             type="radio"
@@ -176,7 +186,7 @@
       </div> -->
       <div class="w-8/12 flex">
         <h1 class="mt-2">Load</h1>
-        <p class="ml-14 mt-2">20 ft</p>
+        <p style="padding-left: 4px" class="ml-14 mt-2">20 ft</p>
         <t-input
           class="ml-4 w-12 dark:bg-gray-800 dark:border-none"
           placeholder="0"
@@ -208,7 +218,7 @@
           :icon="['fas', 'plus-square']"
         />
       </div>
-      <div class="w-1/12">
+      <div style="padding-left: 8px" class="w-1/12">
         <label class="inline-flex items-center">
           <input
             type="radio"

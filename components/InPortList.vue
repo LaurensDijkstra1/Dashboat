@@ -1,5 +1,5 @@
 <template>
-  <table class="">
+  <table>
     <div
       class="
         py-4

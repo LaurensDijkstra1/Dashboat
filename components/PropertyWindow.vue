@@ -19,8 +19,8 @@
         px-8
         bg-gray-100
         flex
-        border border-gray-300
-        dark:bg-gray-800 dark:border-none
+        border
+        dark:border-gray-300 dark:bg-gray-800
       "
     >
       <t-button variant="primary">Save & Quit </t-button>
