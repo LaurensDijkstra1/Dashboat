@@ -40,7 +40,7 @@
             <p>Autopilot</p>
           </div>
         </div>
-        <div class="w-5/12">
+        <div class="w-5/12 ml-8">
           <t-select class="mb-4" :options="['VVS', '-']" />
           <div class="flex">
             <div class="w-6/12">

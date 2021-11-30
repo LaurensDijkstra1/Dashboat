@@ -71,7 +71,7 @@
             {{ props.row[15] }}
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[16]" class="w-10" />
+            <font-awesome-icon :icon="props.row[16]" class="w-6" />
           </td>
           <td :class="props.tdClass">
             {{ props.row[17] }}
