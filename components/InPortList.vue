@@ -1,11 +1,24 @@
 <template>
-  <table>
+  <table class="">
+    <div
+      class="
+        py-4
+        px-8
+        bg-white
+        shadow-lg
+        rounded-t-lg
+        dark:bg-gray-800 dark:border-none
+      "
+    >
+      <p class="font-bold">Inport</p>
+    </div>
     <t-table
+      class="dark:bg-gray-800 border-none text-xs"
       :headers="headers"
       :data="data"
     >
       <template slot="row" slot-scope="props">
-        <tr :class="props.trClass">
+        <tr class="dark:bg-gray-800 dark:border-none" :class="props.trClass">
           <td :class="props.tdClass">
             {{ props.row[0] }}
           </td>
@@ -53,7 +66,7 @@
           <td :class="props.tdClass">
             {{ props.row[14] }}
           </td>
-<!--          -->
+          <!--          -->
           <td :class="props.tdClass">
             {{ props.row[15] }}
           </td>

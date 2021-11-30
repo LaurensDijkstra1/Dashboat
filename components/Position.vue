@@ -4,7 +4,7 @@
       <div class="w-1/12">
         <h1></h1>
       </div>
-      <div class="w-1/12">
+      <div class="w-2/12">
         <h1 class="font-bold">Position 1</h1>
       </div>
       <div class="w-10/12">
@@ -241,11 +241,11 @@
       </div>
       <div class="w-1/12">
         <t-input
-          class="ml-8 w-12 dark:bg-gray-800 dark:border-none"
+          class="ml-16 w-12 dark:bg-gray-800 dark:border-none"
           placeholder="0"
         />
       </div>
-      <div class="ml-0 w-8/12">
+      <div class="ml-20 w-8/12">
         <t-select :options="['?']" />
       </div>
     </div>

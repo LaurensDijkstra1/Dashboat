@@ -1,9 +1,9 @@
 <template>
   <div class="w-full flex">
-    <div class="w-7/12">
+    <div class="w-8/12">
       <in-port-list />
     </div>
-    <div class="w-7/12">
+    <div class="w-6/12">
       <propertyWindow />
       <position />
       <div class="newPostion"></div>
