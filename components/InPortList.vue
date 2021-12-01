@@ -67,19 +67,19 @@
             {{ props.row[14] }}
           </td>
           <!--          -->
-          <td :class="props.tdClass">
-            {{ props.row[15] }}
+          <td class="px-1" :class="props.tdClass">
+            <font-awesome-icon :icon="props.row[15]" class="w-6" />
           </td>
-          <td :class="props.tdClass">
+          <td class="px-1" :class="props.tdClass">
             <font-awesome-icon :icon="props.row[16]" class="w-6" />
           </td>
-          <td :class="props.tdClass">
+          <td class="px-1" :class="props.tdClass">
             {{ props.row[17] }}
           </td>
-          <td :class="props.tdClass">
+          <td class="px-1" :class="props.tdClass">
             {{ props.row[18] }}
           </td>
-          <td :class="props.tdClass">
+          <td class="px-1" :class="props.tdClass">
             {{ props.row[19] }}
           </td>
         </tr>
@@ -184,31 +184,31 @@ const headers = [
     id: 'ICON',
     value: 'ICON',
     text: 'ICON',
-    className: 'bg-grey-100',
+    className: 'bg-grey-100 px-1',
   },
   {
     id: 'ICON',
     value: 'ICON',
     text: 'ICON',
-    className: 'bg-grey-100',
+    className: 'bg-grey-100 px-1',
   },
   {
     id: 'ICON',
     value: 'ICON',
     text: 'ICON',
-    className: 'bg-grey-100',
+    className: 'bg-grey-100 px-1',
   },
   {
     id: 'ICON',
     value: 'ICON',
     text: 'ICON',
-    className: 'bg-grey-100',
+    className: 'bg-grey-100 px-1',
   },
   {
     id: 'ICON',
     value: 'ICON',
     text: 'ICON',
-    className: 'bg-grey-100',
+    className: 'bg-grey-100 px-1',
   },
 ]
 const data = [
@@ -228,7 +228,7 @@ const data = [
     'ETA',
     'BERTH',
     'MOORING',
-    'minus-circle',
+    'circle',
     'recycle',
     'ICON3',
     'ICON4',

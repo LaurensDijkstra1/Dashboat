@@ -52,7 +52,13 @@
         <h1 class="mt-2">ETD</h1>
         <t-input
           type="datetime-local"
-          class="ml-6 w-full dark:bg-gray-800 dark:border-none"
+          class="
+            placeholder-gray-500::placeholder
+            dark:text-gray-400
+            ml-6
+            w-full
+            dark:bg-gray-800 dark:border-none
+          "
           placeholder="dd-mm-yyyy hh-mm"
         />
         <!-- <font-awesome-icon
@@ -79,7 +85,13 @@
         <h1 class="mt-2">ATA</h1>
         <t-input
           type="datetime-local"
-          class="ml-16 w-full dark:bg-gray-800 dark:border-none"
+          class="
+            ml-16
+            w-full
+            dark:bg-gray-800 dark:border-none
+            placeholder-gray-500::placeholder
+            dark:text-gray-400
+          "
           placeholder="ATA"
         />
         <!-- <font-awesome-icon
@@ -91,7 +103,13 @@
         <h1 class="mt-2">ATD</h1>
         <t-input
           type="datetime-local"
-          class="ml-6 w-full dark:bg-gray-800 dark:border-none"
+          class="
+            ml-6
+            w-full
+            dark:bg-gray-800 dark:border-none
+            placeholder-gray-500::placeholder
+            dark:text-gray-400
+          "
           placeholder="ATD"
         />
         <!-- <font-awesome-icon

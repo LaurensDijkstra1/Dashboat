@@ -1,3 +1,34 @@
+<template>
+  <div>
+    <div class="fixed z-100 bottom-0 inset-x-0 pb-2 sm:pb-5 w-4/12">
+      <t-alert
+        class=""
+        variant="success"
+        timeout="4000"
+        v-if="snackbarState"
+        show
+      >
+        Positie toegevoegd
+      </t-alert>
+    </div>
+    <div class="w-full">
+      <div class="flex">
+        <div class="w-6/12">
+          <inPortList />
+        </div>
+        <div class="w-6/12">
+          <propertyWindow />
+          <position />
+          <!-- <div class="w-full mt-6"></div> -->
+          <t-button class="m-auto" v-on:click="showAlert" variant="primary"
+            >Add new position
+          </t-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <script>
 import InPortList from "~/components/InPortList";
 import PropertyWindow from "~/components/PropertyWindow";
@@ -18,34 +49,3 @@ export default {
   },
 };
 </script>
-
-<template>
-  <div>
-    <div class="fixed z-100 bottom-0 inset-x-0 pb-2 sm:pb-5 w-4/12">
-      <t-alert
-        class=""
-        variant="success"
-        timeout="4000"
-        v-if="snackbarState"
-        show
-      >
-        Positie toegevoegd
-      </t-alert>
-    </div>
-    <div class="w-full">
-      <div class="flex">
-        <div class="w-8/12">
-          <inPortList />
-        </div>
-        <div class="w-6/12">
-          <propertyWindow />
-          <position />
-          <div class="w-full mt-6"></div>
-          <t-button class="m-auto" v-on:click="showAlert" variant="primary"
-            >Add new position
-          </t-button>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
