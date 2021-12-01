@@ -3,46 +3,46 @@
 
     <!-- <div v-html="src"></div> -->
 
-    <svg :viewBox="src.viewBox">
+    <!-- <svg :viewBox="src.viewBox">
         <use :xlink:href="'#' + src.id"></use>
-    </svg>
+    </svg> -->
 </template>
 
 <script lang="js">
-const props = {
-    color: {
-        type: String,
-        default: 'black'
-    },
-    name: {
-        type: String,
-        required: true
-    }
+// const props = {
+//     color: {
+//         type: String,
+//         default: 'black'
+//     },
+//     name: {
+//         type: String,
+//         required: true
+//     }
     
-}
-export default {
-    props,
-    // methods: {
-    //     getIconSrc(name) {
-    //         if (name) {
-    //             return require(`~/assets/img/icons/${name}.svg`)
-    //         }
-    //     }
-    // },
-    computed: {
-        src() {
-            if (this.name) {
-                return require(`~/assets/img/icons/${this.name}.svg?sprite`)
-            }           
-        },
-        nameComputed() {
-            return this.name
-        }
-    },
-    data() {
-        return { require(`~/assets/img/icons/${nameComputed}.svg?sprite`) };
-    },
-}
+// }
+// export default {
+//     props,
+//     // methods: {
+//     //     getIconSrc(name) {
+//     //         if (name) {
+//     //             return require(`~/assets/img/icons/${name}.svg`)
+//     //         }
+//     //     }
+//     // },
+//     computed: {
+//         src() {
+//             if (this.name) {
+//                 return require(`~/assets/img/icons/${this.name}.svg?sprite`)
+//             }           
+//         },
+//         nameComputed() {
+//             return this.name
+//         }
+//     },
+//     data() {
+//         return { require(`~/assets/img/icons/${nameComputed}.svg?sprite`) };
+//     },
+// }
 </script>
 
 <style lang="scss">

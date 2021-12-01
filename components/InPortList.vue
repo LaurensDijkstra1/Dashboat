@@ -4,6 +4,7 @@
       :headers="headers"
       :data="data"
     >
+
       <template slot="row" slot-scope="props">
         <tr :class="props.trClass">
           <td :class="props.tdClass">
@@ -55,16 +56,17 @@
           </td>
 <!--          -->
           <td class="px-1" :class="props.tdClass">
-            <icon color="green" :name="props.row[15]" />
+            <!-- <icon color="green" :name="props.row[15]" /> -->
+            <font-awesome-icon :icon="props.row[15]" class="ml-4 w-4 text-green-400" />
           </td>
           <td class="px-1" :class="props.tdClass">
-            <icon color="green" :name="props.row[16]" />
+            <font-awesome-icon :icon="props.row[16]" class="ml-4 w-4 text-red-400" />
           </td>
           <td class="px-1" :class="props.tdClass">
-            <icon :name="props.row[17]" />
+            <font-awesome-icon :icon="props.row[17]" class="ml-4 w-4 text-gray-400" />
           </td>
           <td class="px-1" :class="props.tdClass">
-            <icon :name="props.row[18]" />
+            <font-awesome-icon :icon="props.row[18]" class="ml-4 w-4 text-yellow-400" />
           </td>
         </tr>
       </template>
@@ -74,122 +76,122 @@
 
 <script lang="js">
 
-import Icon from '~/components/Icon'
+// import Icon from '~/components/Icon'
 
   const headers = [
     {
       id: 'type',
       value: 'type',
       text: 'Type',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'etd',
       value: 'etd',
       text: 'ETD',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'Vessel',
       value: 'Vessel',
       text: 'Vessel',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'Berth',
       value: 'Berth',
       text: 'Berth',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'Mooring',
       value: 'Mooring',
       text: 'Mooring',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'B',
       value: 'B',
       text: 'B',
-      className: 'bg-grey-100 px-1',
+      className: 'bg-gray-100 px-1',
     },
     {
       id: 'T',
       value: 't',
       text: 'T',
-      className: 'bg-grey-100 px-1',
+      className: 'bg-gray-100 px-1',
     },
     {
       id: 'P',
       value: 'p',
       text: 'P',
-      className: 'bg-grey-100 px-1',
+      className: 'bg-gray-100 px-1',
     },
     {
       id: 'LOA',
       value: 'LOA',
       text: 'LOA',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'BOA',
       value: 'BOA',
       text: 'BOA',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'Draft',
       value: 'Draft',
       text: 'Draft',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'H',
       value: 'H',
       text: 'H',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'ETA',
       value: 'ETA',
       text: 'ETA',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'BERTH',
       value: 'BERTH',
       text: 'BERTH',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'MOORING',
       value: 'MOORING',
       text: 'MOORING',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'ICON',
       value: 'ICON',
       text: 'ICON',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'ICON',
       value: 'ICON',
       text: 'ICON',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'ICON',
       value: 'ICON',
       text: 'ICON',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
     {
       id: 'ICON',
       value: 'ICON',
       text: 'ICON',
-      className: 'bg-grey-100',
+      className: 'bg-gray-100',
     },
   ]
   const data = [
@@ -209,10 +211,10 @@ import Icon from '~/components/Icon'
       'ETA',
       'BERTH',
       'MOORING',
-      'circle',
+      'award',
       'recycle',
-      'recycle',
-      'recycle',
+      'paperclip',
+      'pen',
     ],
     [
       'A', 
@@ -223,7 +225,7 @@ import Icon from '~/components/Icon'
   ]
 
   export default {
-    components: { Icon },
+    // components: { Icon },
 
     data: () => ({
       headers,
