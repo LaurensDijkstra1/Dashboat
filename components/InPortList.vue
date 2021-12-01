@@ -1,6 +1,19 @@
 <template>
   <table>
+    <div
+      class="
+        py-4
+        px-8
+        bg-white
+        shadow-lg
+        rounded-t-lg
+        dark:bg-gray-800 dark:border-none
+      "
+    >
+      <p class="font-bold">Inport</p>
+    </div>
     <t-table
+      class="dark:bg-gray-800 border-none text-xs"
       :headers="headers"
       :data="data"
     >
@@ -22,7 +35,7 @@
       </template>
 
       <template slot="row" slot-scope="props">
-        <tr :class="props.trClass">
+        <tr class="dark:bg-gray-800 dark:border-none" :class="props.trClass">
           <td :class="props.tdClass">
             {{ props.row[0] }}
           </td>
@@ -91,9 +104,6 @@
 </template>
 
 <script lang="js">
-
-// import Icon from '~/components/Icon'
-
 const headers = [
   {
     text: 'Type',
@@ -174,22 +184,16 @@ const data = [
     'ETA',
     'BERTH',
     'MOORING',
-    'award',
+    'minus-circle',
     'recycle',
-    'paperclip',
-    'pen',
+    'ICON3',
+    'ICON4',
+    'ICON5',
   ],
-  [
-    'A',
-    '15:00',
-    'EST',
-    '0.0?'
-  ],
+  ['A', '15:00', 'EST', '0.0?'],
 ]
 
 export default {
-  // components: { Icon },
-
   data: () => ({
     headers,
     data
