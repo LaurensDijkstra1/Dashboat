@@ -6,6 +6,7 @@
     <!-- <svg :viewBox="src.viewBox">
         <use :xlink:href="'#' + src.id"></use>
     </svg> -->
+  <div></div>
 </template>
 
 <script lang="js">
@@ -18,9 +19,9 @@
 //         type: String,
 //         required: true
 //     }
-    
+
 // }
-// export default {
+
 //     props,
 //     // methods: {
 //     //     getIconSrc(name) {
@@ -33,7 +34,7 @@
 //         src() {
 //             if (this.name) {
 //                 return require(`~/assets/img/icons/${this.name}.svg?sprite`)
-//             }           
+//             }
 //         },
 //         nameComputed() {
 //             return this.name
@@ -42,9 +43,5 @@
 //     data() {
 //         return { require(`~/assets/img/icons/${nameComputed}.svg?sprite`) };
 //     },
-// }
+export default { }
 </script>
-
-<style lang="scss">
-
-</style>
