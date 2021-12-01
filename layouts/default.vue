@@ -2,19 +2,15 @@
   <div class="px-4 py-6">
     <filter-header />
 
-    <div class="flex">
-      <inPort />
-      <!-- <expected /> -->
-    </div>
+    <nuxt />
   </div>
 </template>
 
 <script lang="js">
 import FilterHeader from '~/components/FilterHeader'
-import Expected from '~/components/Expected'
-import InPort from '~/components/InPort'
+
 export default {
-  components: { FilterHeader,  InPort},
+  components: { FilterHeader },
   head: {
     bodyAttrs: {
       class: 'bg-gray-100 dark:bg-gray-800 dark:text-white'

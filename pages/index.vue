@@ -8,6 +8,7 @@
 
 <script>
 import InPortList from '~/components/InPortList'
+
 export default {
   components: { InPortList },
 
