@@ -3,27 +3,25 @@ export default {
   head: {
     title: 'Dashboat',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
+  css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // VueTailwind: https://www.vue-tailwind.com
-    '~plugins/vue-tailwind',
+    '~/plugins/vue-tailwind',
+    '~/plugins/fontawesome.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -36,7 +34,8 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     // https://color-mode.nuxtjs.org
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxtjs/svg'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -49,18 +48,17 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  },
+  build: {},
 
   // TailwindCSS Configuration: https://tailwindcss.com/docs/configuration
   tailwindcss: {
     jit: true,
     // add '~tailwind.config` alias
-    exposeConfig: true
+    exposeConfig: true,
   },
 
   // Nuxt Color Mode Configurations: https://color-mode.nuxtjs.org
   colorMode: {
     classSuffix: '',
-  }
+  },
 }
