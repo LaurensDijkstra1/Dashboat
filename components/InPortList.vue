@@ -10,7 +10,7 @@
         dark:bg-gray-800 dark:border-none
       "
     >
-      <p class="font-bold">Inport</p>
+      <p class="font-bold">In port</p>
     </div>
     <t-table
       class="dark:bg-gray-800 border-none text-xs"
@@ -28,7 +28,7 @@
               <template v-if="item.text">
                 {{ item.text }}
               </template>
-              <font-awesome-icon v-else-if="item.icon" :icon="item.icon" :class="`text-${item.color}-400`" class="ml-4 w-4" />
+              <font-awesome-icon v-else-if="item.icon" :icon="item.icon" :class="`text-${item.color}-400`" class="w-4" />
             </th>
           </tr>
         </thead>
@@ -72,7 +72,7 @@
             {{ props.row[10] }}
           </td>
           <td :class="props.tdClass">
-            {{ props.row[11] }}
+            <font-awesome-icon :icon="props.row[11]" class="ml-1 w-1 text-gray-400" />
           </td>
           <td :class="props.tdClass">
             {{ props.row[12] }}
@@ -86,16 +86,16 @@
           <!--          -->
           <td class="px-1" :class="props.tdClass">
             <!-- <icon color="green" :name="props.row[15]" /> -->
-            <font-awesome-icon :icon="props.row[15]" class="ml-4 w-4 text-green-400" />
+            <font-awesome-icon :icon="props.row[15]" class="w-4 text-gray-400" />
           </td>
           <td class="px-1" :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[16]" class="ml-4 w-4 text-red-400" />
+            <font-awesome-icon :icon="props.row[16]" class="w-4 text-gray-400" />
           </td>
           <td class="px-1" :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[17]" class="ml-4 w-4 text-gray-400" />
+            <font-awesome-icon :icon="props.row[17]" class="w-4 text-gray-400" />
           </td>
           <td class="px-1" :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[18]" class="ml-4 w-4 text-yellow-400" />
+            <font-awesome-icon :icon="props.row[18]" class="w-4 text-gray-400" />
           </td>
         </tr>
       </template>
@@ -145,52 +145,72 @@ const headers = [
     text: 'ETA',
   },
   {
-    text: 'BERTH',
+    text: 'Berth',
   },
   {
-    text: 'MOORING',
+    text: 'Mooring',
   },
   {
     icon: 'award',
-    color: 'green'
+    color: 'black'
   },
   {
     icon: 'recycle',
-    color: 'red'
+    color: 'black'
   },
   {
     icon: 'paperclip',
-    color: 'gray'
+    color: 'black'
   },
   {
     icon: 'pen',
-    color: 'yellow'
+    color: 'black'
   },
 ]
 const data = [
   [
-    'Type',
-    'ETD',
-    'Vessel',
-    'Berth',
-    'Mooring',
-    'B',
-    'T',
-    'P',
-    'LOA',
-    'BOA',
-    'Draft',
-    'H',
-    'ETA',
-    'BERTH',
-    'MOORING',
-    'minus-circle',
-    'recycle',
-    'ICON3',
-    'ICON4',
-    'ICON5',
+    'SA', //Type
+    '08-02 19:00', //ETD
+    'AIRSET', //Vessel
+    'WEBBH', //Berth
+    '? ? ', //Mooring
+    '', //B
+    '', //T
+    '', //P
+    '86.00', //LOA
+    '10.50', //BOA
+    '', //Draft
+    '', //H, Icon exlamation
+    '05-11 23:59', //ETA
+    'OKWWH', //Berth
+    '? ? U', //Mooring
+    '', //Icon award
+    '', //Icon recycle
+    '', //Icon paperclip
+    'pen' //Icon pen
   ],
-  ['A', '15:00', 'EST', '0.0?'],
+  [
+    'A', //Type
+    '30-03 12:00', //ETD
+    'WATERSTAD', //Vessel
+    'DSKHH', //Berth
+    '? ? U', //Mooring
+    '', //B
+    '', //T
+    '', //P
+    '18.28', //LOA
+    '6.70', //BOA
+    '3.20', //Draft
+    '', //H, Icon exlamation
+    '', //ETA
+    '', //Berth
+    '', //Mooring
+    '', //Icon award
+    'recycle', //Icon recycle
+    '', //Icon paperclip
+    '' //Icon pen
+  ],
+  
 ]
 
 export default {

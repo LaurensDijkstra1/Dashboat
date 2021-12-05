@@ -68,7 +68,7 @@ const settings = {
     props: {
       classes: {
         table:
-          'min-w-full divide-y divide-gray-100 shadow-sm border-gray-200 border',
+          'min-w-full divide-y divide-gray-100 shadow-sm border-gray-200 border hidden', //"hidden" table duplicates
         thead: 'bg-white divide-gray-200 text-left',
         theadTr: '',
         theadTh:

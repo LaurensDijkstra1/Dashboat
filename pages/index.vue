@@ -12,16 +12,17 @@
       </t-alert>
     </div>
     <div class="w-full">
-      <div class="flex">
-        <div class="w-6/12">
+      <div class="space-x-1">
+        <div class="inline-block">
           <inPortList />
         </div>
-        <div class="w-6/12">
-          <propertyWindow />
-          <position />
-          <t-button class="m-auto" v-on:click="showAlert" variant="primary">
+        <div class="inline-block">
+          <!-- <propertyWindow />
+          <position /> -->
+          <expected />
+          <!-- <t-button class="m-auto" v-on:click="showAlert" variant="primary">
             Add new position
-          </t-button>
+          </t-button> -->
         </div>
       </div>
     </div>
@@ -32,9 +33,10 @@
 import InPortList from '~/components/InPortList'
 import PropertyWindow from '~/components/PropertyWindow'
 import Position from '~/components/Position'
+import Expected from '~/components/Expected.vue';
 
 export default {
-  components: { InPortList, PropertyWindow, Position },
+  components: { InPortList, PropertyWindow, Position, Expected },
   data () {
     return {
       snackbarState: false,
