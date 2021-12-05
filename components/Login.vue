@@ -6,7 +6,7 @@
         w-4/12
         items-center
         justify-center
-        h-screen
+        max-h-screen
         bg-gray-100
       "
     >
@@ -48,6 +48,12 @@
                   focus:outline-none focus:ring-1 focus:ring-blue-600
                 "
               />
+              <div class="flex mt-6">
+                <label class="flex items-center">
+                  <input type="checkbox" class="form-checkbox" />
+                  <span class="ml-2 text-gray-400">Account onthouden </span>
+                </label>
+              </div>
             </div>
             <div class="flex items-baseline justify-between">
               <t-button
@@ -64,8 +70,11 @@
         </form>
       </div>
     </div>
-    <div
-      class="w-8/12 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500"
-    ></div>
+    <div class="max-h-screen w-8/12">
+      <img
+        class="w-full max-h-screen min-h-screen mb-12 object-cover"
+        src="@/assets/img/cover.jpg"
+      />
+    </div>
   </div>
 </template>
