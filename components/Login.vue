@@ -10,8 +10,8 @@
         bg-gray-100
       "
     >
-      <img class="w-40" src="@/assets/img/seaportslogo.png" />
-      <div class="px-8 py-6 mt-4 text-left bg-white shadow-lg">
+      <img class="w-40 mb-12" src="@/assets/img/seaportslogo.png" />
+      <div class="w-8/12 px-8 py-6 mt-4 text-left bg-white shadow-lg">
         <h3 class="text-2xl text-gray-800 font-bold text-center">
           Login op uw account
         </h3>
@@ -57,7 +57,7 @@
                 Login
               </t-button>
               <a href="#" class="text-sm text-gray-600 hover:underline"
-                >Forgot password?</a
+                >Wachtwoord vergeten?</a
               >
             </div>
           </div>
