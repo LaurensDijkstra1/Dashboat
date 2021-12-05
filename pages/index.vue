@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="fixed z-100 bottom-0 inset-x-0 pb-2 sm:pb-5 w-4/12">
+    <!-- <div class="fixed z-100 bottom-0 inset-x-0 pb-2 sm:pb-5 w-4/12">
       <t-alert
         class=""
         variant="success"
@@ -24,24 +24,24 @@
           </t-button>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import InPortList from '~/components/InPortList'
-import PropertyWindow from '~/components/PropertyWindow'
-import Position from '~/components/Position'
+import InPortList from "~/components/InPortList";
+import PropertyWindow from "~/components/PropertyWindow";
+import Position from "~/components/Position";
 
 export default {
   components: { InPortList, PropertyWindow, Position },
-  data () {
+  data() {
     return {
       snackbarState: false,
-    }
+    };
   },
   methods: {
-    showAlert () {
+    showAlert() {
       // console.log("werkt het?");
       this.snackbarState = true;
     },
