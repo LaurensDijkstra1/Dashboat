@@ -28,7 +28,7 @@
               <template v-if="item.text">
                 {{ item.text }}
               </template>
-              <font-awesome-icon v-else-if="item.icon" :icon="item.icon" :class="`text-${item.color}-400`" class="w-4" />
+              <font-awesome-icon v-else-if="item.icon" :icon="item.icon" :class="`text-${item.color}-400`" class="m-1 w-4" />
             </th>
           </tr>
         </thead>
@@ -72,7 +72,7 @@
             {{ props.row[10] }}
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[11]" class="ml-1 w-1 text-gray-400" />
+            <font-awesome-icon :icon="props.row[11]" class="m-1 w-1 text-gray-400" />
           </td>
           <td :class="props.tdClass">
             {{ props.row[12] }}
@@ -86,16 +86,16 @@
           <!--          -->
           <td class="px-1" :class="props.tdClass">
             <!-- <icon color="green" :name="props.row[15]" /> -->
-            <font-awesome-icon :icon="props.row[15]" class="w-4 text-gray-400" />
+            <font-awesome-icon :icon="props.row[15]" class="m-1 w-4 text-gray-400" />
           </td>
           <td class="px-1" :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[16]" class="w-4 text-gray-400" />
+            <font-awesome-icon :icon="props.row[16]" class="m-1 w-4 text-gray-400" />
           </td>
           <td class="px-1" :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[17]" class="w-4 text-gray-400" />
+            <font-awesome-icon :icon="props.row[17]" class="m-1 w-4 text-gray-400" />
           </td>
           <td class="px-1" :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[18]" class="w-4 text-gray-400" />
+            <font-awesome-icon :icon="props.row[18]" class="m-1 w-4 text-gray-400" />
           </td>
         </tr>
       </template>
@@ -205,7 +205,7 @@ const data = [
     '', //ETA
     '', //Berth
     '', //Mooring
-    '', //Icon award
+    'award', //Icon award
     'recycle', //Icon recycle
     '', //Icon paperclip
     '' //Icon pen

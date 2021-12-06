@@ -11,21 +11,21 @@
         Positie toegevoegd
       </t-alert>
     </div>
-    <div class="w-full">
-      <div class="space-x-1">
-        <div class="inline-block">
+    <div class="flex">
+        <div>
           <inPortList />
         </div>
-        <div class="inline-block">
-          <!-- <propertyWindow />
-          <position /> -->
+        <div>
           <expected />
-          <!-- <t-button class="m-auto" v-on:click="showAlert" variant="primary">
-            Add new position
-          </t-button> -->
-        </div>
-      </div>
+        </div>  
     </div>
+    <div class="absolute right-0 top-17 w-6/12 px-4">
+      <propertyWindow />
+      <position />
+      <t-button class="m-auto" v-on:click="showAlert" variant="primary">
+        Add new position
+      </t-button>              
+    </div>    
   </div>
 </template>
 
