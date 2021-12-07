@@ -40,6 +40,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/firebase',
+      
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
   ],
@@ -61,4 +63,19 @@ export default {
   colorMode: {
     classSuffix: '',
   },
+
+  firebase: {
+    config: {
+      apiKey: "AIzaSyArjNqBqteKf1_SKZjGITuKwGWoooFDIGo",
+      authDomain: "dashboat-794b9.firebaseapp.com",
+      projectId: "dashboat-794b9",
+      storageBucket: "dashboat-794b9.appspot.com",
+      messagingSenderId: "733127597435",
+      appId: "1:733127597435:web:103c4fa53d67d2bb3171de",
+      measurementId: "G-6HZTZYMP01"
+    },
+    services: {
+      auth: true // Just as example. Can be any other service.
+    }
+  }
 }
