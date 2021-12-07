@@ -1,14 +1,12 @@
 <template lang="html">
-  <div class="">
-    <!-- <filter-header /> -->
-    <login />
+  <div class="px-6 m-4">
+    <filter-header />
     <nuxt />
   </div>
 </template>
 
 <script lang="js">
 import FilterHeader from '~/components/FilterHeader'
-import Login from '~/components/Login'
 
 export default {
   components: { FilterHeader },

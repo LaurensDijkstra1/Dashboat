@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <div class="fixed z-100 bottom-0 inset-x-0 pb-2 sm:pb-5 w-4/12">
+    <div class="fixed z-100 bottom-0 inset-x-0 pb-2 sm:pb-5 w-4/12">
       <t-alert
         class=""
         variant="success"
@@ -24,7 +24,7 @@
           </t-button>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 

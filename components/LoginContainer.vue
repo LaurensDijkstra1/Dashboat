@@ -70,11 +70,5 @@
         </form>
       </div>
     </div>
-    <div class="max-h-screen w-8/12">
-      <img
-        class="w-full max-h-screen min-h-screen mb-12 object-cover"
-        src="@/assets/img/cover.jpg"
-      />
-    </div>
   </div>
 </template>
