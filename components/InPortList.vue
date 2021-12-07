@@ -37,7 +37,7 @@
       <template slot="row" slot-scope="props">
         <tr class="dark:bg-gray-800 dark:border-none" :class="props.trClass">
           <td :class="props.tdClass">
-            {{ props.row[0] }}
+            <font-awesome-icon :icon="props.row[0]" class="m-1 w-4 text-black-400" />
           </td>
           <td :class="props.tdClass">
             {{ props.row[1] }}
@@ -106,7 +106,8 @@
 <script lang="js">
 const headers = [
   {
-    text: 'Type',
+    icon: 'ship',
+    color: 'black'
   },
   {
     text: 'ETD',
@@ -169,7 +170,7 @@ const headers = [
 ]
 const data = [
   [
-    'SA', //Type
+    'wifi', //Type
     '08-02 19:00', //ETD
     'AIRSET', //Vessel
     'WEBBH', //Berth
@@ -190,7 +191,28 @@ const data = [
     'pen' //Icon pen
   ],
   [
-    'A', //Type
+    'laptop', //Type
+    '30-03 12:00', //ETD
+    'WATERSTAD', //Vessel
+    'DSKHH', //Berth
+    '? ? U', //Mooring
+    '', //B
+    '', //T
+    '', //P
+    '18.28', //LOA
+    '6.70', //BOA
+    '3.20', //Draft
+    '', //H, Icon exlamation
+    '', //ETA
+    '', //Berth
+    '', //Mooring
+    'award', //Icon award
+    'recycle', //Icon recycle
+    '', //Icon paperclip
+    '' //Icon pen
+  ],
+  [
+    'dharmachakra', //Type
     '30-03 12:00', //ETD
     'WATERSTAD', //Vessel
     'DSKHH', //Berth
