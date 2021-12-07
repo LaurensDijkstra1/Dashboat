@@ -1,17 +1,7 @@
 <template>
-  <table>
-    <div
-      class="
-        py-4
-        px-8
-        bg-white
-        shadow-lg
-        rounded-t-lg
-        dark:bg-gray-800 dark:border-none
-      "
-    >
-      <p class="font-bold">Inport</p>
-    </div>
+  <div class="py-4 px-8 bg-white shadow-lg rounded-t-lg dark:bg-gray-800 dark:border-none">
+    <p class="font-bold">In port</p>
+
     <t-table
       class="dark:bg-gray-800 border-none text-xs"
       :headers="headers"
@@ -23,12 +13,12 @@
             <th
               v-for="(item, index) in props.data"
               :key="index"
-              :class="[props.thClass, item.icon ? 'px-1' : 'px-2']"
+              :class="[props.thClass, item.icon ? '' : '']"
             >
               <template v-if="item.text">
                 {{ item.text }}
               </template>
-              <font-awesome-icon v-else-if="item.icon" :icon="item.icon" :class="`text-${item.color}-400`" class="ml-4 w-4" />
+              <font-awesome-icon v-else-if="item.icon" :icon="item.icon" :class="`text-${item.color}-400`" class="w-4" />
             </th>
           </tr>
         </thead>
@@ -84,23 +74,23 @@
             {{ props.row[14] }}
           </td>
           <!--          -->
-          <td class="px-1" :class="props.tdClass">
+          <td :class="props.tdClass">
             <!-- <icon color="green" :name="props.row[15]" /> -->
-            <font-awesome-icon :icon="props.row[15]" class="ml-4 w-4 text-green-400" />
+            <font-awesome-icon :icon="props.row[15]" class="w-4 text-green-400" />
           </td>
-          <td class="px-1" :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[16]" class="ml-4 w-4 text-red-400" />
+          <td :class="props.tdClass">
+            <font-awesome-icon :icon="props.row[16]" class="w-4 text-red-400" />
           </td>
-          <td class="px-1" :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[17]" class="ml-4 w-4 text-gray-400" />
+          <td :class="props.tdClass">
+            <font-awesome-icon :icon="props.row[17]" class="w-4 text-gray-400" />
           </td>
-          <td class="px-1" :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[18]" class="ml-4 w-4 text-yellow-400" />
+          <td :class="props.tdClass">
+            <font-awesome-icon :icon="props.row[18]" class="w-4 text-yellow-400" />
           </td>
         </tr>
       </template>
     </t-table>
-  </table>
+  </div>
 </template>
 
 <script lang="js">
@@ -122,12 +112,15 @@ const headers = [
   },
   {
     text: 'B',
+    className: 'px-1',
   },
   {
     text: 'T',
+    className: 'px-1',
   },
   {
     text: 'P',
+    className: 'px-1',
   },
   {
     text: 'LOA',
@@ -184,11 +177,10 @@ const data = [
     'ETA',
     'BERTH',
     'MOORING',
-    'minus-circle',
+    'award',
     'recycle',
-    'ICON3',
-    'ICON4',
-    'ICON5',
+    'paperclip',
+    'pen',
   ],
   ['A', '15:00', 'EST', '0.0?'],
 ]

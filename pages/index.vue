@@ -2,10 +2,10 @@
   <div>
     <div class="fixed z-100 bottom-0 inset-x-0 pb-2 sm:pb-5 w-4/12">
       <t-alert
+        v-if="snackbarState"
         class=""
         variant="success"
         timeout="4000"
-        v-if="snackbarState"
         show
       >
         Positie toegevoegd
@@ -14,12 +14,13 @@
     <div class="w-full">
       <div class="flex">
         <div class="w-6/12">
-          <inPortList />
+          <in-port-list />
         </div>
+
         <div class="w-6/12">
-          <propertyWindow />
+          <property-window />
           <position />
-          <t-button class="m-auto" v-on:click="showAlert" variant="primary">
+          <t-button class="m-auto" variant="primary" @click="showAlert">
             Add new position
           </t-button>
         </div>
@@ -43,8 +44,8 @@ export default {
   methods: {
     showAlert () {
       // console.log("werkt het?");
-      this.snackbarState = true;
+      this.snackbarState = true
     },
   },
-};
+}
 </script>

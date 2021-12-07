@@ -72,11 +72,11 @@ const settings = {
         thead: 'bg-white divide-gray-200 text-left',
         theadTr: '',
         theadTh:
-          'px-3 py-2 font-semibold text-left bg-white dark:bg-gray-600 border-b',
+          'py-2 font-semibold text-left bg-white dark:bg-gray-600 border-b',
         tbody: 'bg-white divide-y divide-gray-100',
         th: 'px-6 py-3 text-left font-bold text-gray-800 uppercase tracking-wider',
         tr: '',
-        td: 'px-3 py-2 whitespace-no-wrap',
+        td: 'py-2 whitespace-no-wrap',
         tfoot: '',
         tfootTr: '',
         tfootTd: '',
