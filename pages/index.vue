@@ -30,19 +30,19 @@
 </template>
 
 <script>
-import InPortList from '~/components/InPortList'
-import PropertyWindow from '~/components/PropertyWindow'
-import Position from '~/components/Position'
+import InPortList from "~/components/InPortList";
+import PropertyWindow from "~/components/PropertyWindow";
+import Position from "~/components/Position";
 
 export default {
   components: { InPortList, PropertyWindow, Position },
-  data () {
+  data() {
     return {
       snackbarState: false,
-    }
+    };
   },
   methods: {
-    showAlert () {
+    showAlert() {
       // console.log("werkt het?");
       this.snackbarState = true
     },

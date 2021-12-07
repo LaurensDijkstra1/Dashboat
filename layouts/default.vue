@@ -1,7 +1,6 @@
 <template lang="html">
-  <div class="px-4 py-6">
+  <div class="px-6 m-4">
     <filter-header />
-
     <nuxt />
   </div>
 </template>
