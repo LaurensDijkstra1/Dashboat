@@ -42,13 +42,13 @@
             {{ props.row[4] }}
           </td>
 
-          <td :class="props.tdClass">
+          <td class="px-1" :class="props.tdClass">
             {{ props.row[5] }}
           </td>
-          <td :class="props.tdClass">
+          <td class="px-1" :class="props.tdClass">
             {{ props.row[6] }}
           </td>
-          <td :class="props.tdClass">
+          <td class="px-1" :class="props.tdClass">
             {{ props.row[7] }}
           </td>
 
@@ -74,18 +74,18 @@
             {{ props.row[14] }}
           </td>
           <!--          -->
-          <td :class="props.tdClass">
+          <td class="px-1" :class="props.tdClass">
             <!-- <icon color="green" :name="props.row[15]" /> -->
-            <font-awesome-icon :icon="props.row[15]" class="w-4 text-green-400" />
+            <font-awesome-icon :icon="props.row[15]" class="ml-4 w-4 text-green-400" />
           </td>
-          <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[16]" class="w-4 text-red-400" />
+          <td class="px-1" :class="props.tdClass">
+            <font-awesome-icon :icon="props.row[16]" class="ml-4 w-4 text-red-400" />
           </td>
-          <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[17]" class="w-4 text-gray-400" />
+          <td class="px-1" :class="props.tdClass">
+            <font-awesome-icon :icon="props.row[17]" class="ml-4 w-4 text-gray-400" />
           </td>
-          <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[18]" class="w-4 text-yellow-400" />
+          <td class="px-1" :class="props.tdClass">
+            <font-awesome-icon :icon="props.row[18]" class="ml-4 w-4 text-yellow-400" />
           </td>
         </tr>
       </template>
@@ -113,15 +113,12 @@ const headers = [
   },
   {
     text: 'B',
-    className: 'px-1',
   },
   {
     text: 'T',
-    className: 'px-1',
   },
   {
     text: 'P',
-    className: 'px-1',
   },
   {
     text: 'LOA',
@@ -146,19 +143,19 @@ const headers = [
   },
   {
     icon: 'award',
-    color: 'black'
+    color: 'green'
   },
   {
     icon: 'recycle',
-    color: 'black'
+    color: 'red'
   },
   {
     icon: 'paperclip',
-    color: 'black'
+    color: 'gray'
   },
   {
     icon: 'pen',
-    color: 'black'
+    color: 'yellow'
   },
 ]
 const data = [

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
+    "buildfirebase": "webpack",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
@@ -26,13 +27,27 @@
     "vue-tailwind-icons": "^0.1.2"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.14.7",
     "@iconify/vue": "^3.1.1",
     "@nuxtjs/color-mode": "^2.1.1",
-    "@nuxtjs/svg": "^0.0.0",
     "@nuxtjs/tailwindcss": "^4.2.0",
     "postcss": "^8.3.5",
     "raw-loader": "^4.0.2",
-    "tailwindcss-dark-mode": "^1.1.4"
-  }
+    "source-map-loader": "^1.0.0",
+    "tailwindcss-dark-mode": "^1.1.7",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "description": "A dashboard for boats.",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaurensDijkstra1/Dashboat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaurensDijkstra1/Dashboat/issues"
+  },
+  "homepage": "https://github.com/LaurensDijkstra1/Dashboat#readme"
 }
