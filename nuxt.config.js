@@ -3,27 +3,25 @@ export default {
   head: {
     title: 'Dashboat',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
+  css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // VueTailwind: https://www.vue-tailwind.com
-    '~plugins/vue-tailwind',
+    '~/plugins/vue-tailwind',
+    '~/plugins/fontawesome.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -36,11 +34,16 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     // https://color-mode.nuxtjs.org
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
   ],
+
+  router: {
+    middleware: ['auth']
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/firebase',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
   ],
@@ -49,18 +52,39 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  },
+  build: {},
 
   // TailwindCSS Configuration: https://tailwindcss.com/docs/configuration
   tailwindcss: {
     jit: true,
     // add '~tailwind.config` alias
-    exposeConfig: true
+    exposeConfig: true,
   },
 
   // Nuxt Color Mode Configurations: https://color-mode.nuxtjs.org
   colorMode: {
     classSuffix: '',
+  },
+
+  firebase: {
+    config: {
+      apiKey: "AIzaSyArjNqBqteKf1_SKZjGITuKwGWoooFDIGo",
+      authDomain: "dashboat-794b9.firebaseapp.com",
+      projectId: "dashboat-794b9",
+      storageBucket: "dashboat-794b9.appspot.com",
+      messagingSenderId: "733127597435",
+      appId: "1:733127597435:web:103c4fa53d67d2bb3171de",
+      measurementId: "G-6HZTZYMP01"
+    },
+    services: {
+      auth: {
+        persistence: 'local', // default
+        initialize: {
+          onAuthStateChangedAction: 'onAuthStateChangedAction',
+          subscribeManually: false
+        },
+        ssr: false
+      }
+    }
   }
 }

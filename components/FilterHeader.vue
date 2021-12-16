@@ -1,11 +1,25 @@
 <template>
-  <header class="border border-gray-200 rounded bg-white dark:bg-gray-600 dark:border-none px-3 py-4 mb-6 flex justify-between">
+  <header
+    class="
+      border border-gray-200
+      rounded
+      bg-white
+      dark:bg-gray-600 dark:border-none
+      px-3
+      py-4
+      mb-6
+      flex
+      justify-between
+    "
+  >
     <section class="flex flex-row items-center space-x-4">
-      <p>Scheepshaven</p>
+      <p>
+        <nuxt-link to="/">
+          Scheepshaven
+        </nuxt-link>
+      </p>
 
-      <t-select
-        :options="['Eemshaven']"
-      />
+      <t-select :options="['Eemshaven']" />
 
       <div class="flex divide-x divide-gray">
         <div class="flex">
@@ -55,29 +69,32 @@
         </div>
       </div>
 
-      <t-button class="text-sm" value="primary">
-        Reset
-      </t-button>
+      <t-button class="text-sm" value="primary"> Reset </t-button>
 
-      <t-select
-        :options="['In Port - Expected']"
-      />
+      <t-select :options="['In Port - Expected']" />
     </section>
 
     <t-button
       class="font-bold"
       variant="primary"
-      @click="$colorMode.preference = $colorMode.value === 'light' ? 'dark' : 'light'"
+      @click="
+        $colorMode.preference = $colorMode.value === 'light' ? 'dark' : 'light'
+      "
     >
-      {{ $colorMode.value === 'light' ? 'Night Mode' : 'Day Mode' }}
+      {{ $colorMode.value === "light" ? "Night Mode" : "Day Mode" }}
+    </t-button>
+    <t-button
+      class="font-bold"
+      variant="primary"
+      @click="$router.push('/logout')"
+    >
+      Logout
     </t-button>
   </header>
 </template>
 
 <script>
-export default { }
+export default {};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
