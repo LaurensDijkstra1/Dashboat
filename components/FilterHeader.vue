@@ -79,6 +79,13 @@
     >
       {{ $colorMode.value === "light" ? "Night Mode" : "Day Mode" }}
     </t-button>
+    <t-button
+      class="font-bold"
+      variant="primary"
+      @click="$router.push('/logout')"
+    >
+      Logout
+    </t-button>
   </header>
 </template>
 

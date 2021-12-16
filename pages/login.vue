@@ -8,33 +8,19 @@
         <div>
           <label class="block text-gray-800" for="email">Email</label>
           <input
+            v-model="auth.email"
             type="text"
             placeholder="Email"
-            class="
-              w-full
-              px-4
-              py-2
-              mt-2
-              border
-              rounded-md
-              focus:outline-none focus:ring-1 focus:ring-blue-600
-            "
+            class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
           />
         </div>
         <div class="mt-4">
           <label class="block text-gray-800">Wachtwoord</label>
           <input
+            v-model="auth.password"
             type="password"
             placeholder="Password"
-            class="
-              w-full
-              px-4
-              py-2
-              mt-2
-              border
-              rounded-md
-              focus:outline-none focus:ring-1 focus:ring-blue-600
-            "
+            class=" w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
           />
           <div class="flex mt-6">
             <label class="flex items-center">
@@ -46,30 +32,25 @@
         <div class="flex items-baseline justify-between">
           <div class="flex">
             <t-button
-              class="
-                px-6
-                h-12
-                py-2
-                mt-4
-                text-white
-                rounded-lg
-                hover:bg-blue-900
-              "
+              type="button"
+              @click="onClicked"
+              class="px-6 h-12 py-2 mt-4 text-white rounded-lg hover:bg-blue-900"
               variant="primary"
             >
               Login
             </t-button>
-            <t-button
-              to="./register"
-              class="px-6 h-12 py-2 mt-4 ml-4 text-white rounded-lg"
-              variant="primary"
-            >
-              Register
-            </t-button>
           </div>
-          <a href="#" class="text-sm text-gray-600 hover:underline"
-            >Wachtwoord vergeten?</a
+        </div>
+        <div class="fixed z-100 bottom-0 inset-x-0 pb-2 sm:pb-5 w-4/12">
+          <t-alert
+            v-if="snackbarState"
+            timeout="4000"
+            absolute
+            bottom
+            center
+            show
           >
+          </t-alert>
         </div>
       </div>
     </form>
@@ -80,5 +61,27 @@
 export default {
   components: {},
   layout: "auth",
+  data(){
+    return {
+      snackbarState: false,
+      snackbarText: 'No error message',
+      auth: {
+        email:'',
+        password:'',
+      }
+    };
+  },
+  methods: {
+    onClicked(){
+      let that = this
+      this.$fire.auth.signInWithEmailAndPassword(this.auth.email, this.auth.password)
+      .catch(function (error) {
+        that.snackbarText = error.message
+        that.snackbar = true
+      }).then((user) => {
+        $nuxt.$router.push('/')
+      })
+    }
+  }
 };
 </script>
