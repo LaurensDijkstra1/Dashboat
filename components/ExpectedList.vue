@@ -1,17 +1,7 @@
 <template>
-  <table>
-    <div
-      class="
-        py-4
-        px-8
-        bg-white
-        shadow-lg
-        rounded-t-lg
-        dark:bg-gray-800 dark:border-none
-      "
-    >
-      <p class="font-bold">Expected</p>
-    </div>
+  <div>
+    <p class="font-bold">Expected</p>
+
     <t-table
       class="dark:bg-gray-800 border-none text-xs"
       :headers="headers"
@@ -51,17 +41,15 @@
           <td :class="props.tdClass">
             {{ props.row[4] }}
           </td>
-
-          <td class="px-1" :class="props.tdClass">
+          <td :class="props.tdClass">
             {{ props.row[5] }}
           </td>
-          <td class="px-1" :class="props.tdClass">
+          <td :class="props.tdClass">
             {{ props.row[6] }}
           </td>
-          <td class="px-1" :class="props.tdClass">
+          <td :class="props.tdClass">
             {{ props.row[7] }}
           </td>
-
           <td :class="props.tdClass">
             {{ props.row[8] }}
           </td>
@@ -74,9 +62,7 @@
           <td :class="props.tdClass">
             <font-awesome-icon :icon="props.row[11]" class="m-1 w-1 text-gray-400" />
           </td>
-          <!--          -->
           <td class="px-1" :class="props.tdClass">
-            <!-- <icon color="green" :name="props.row[15]" /> -->
             <font-awesome-icon :icon="props.row[12]" class="m-1 w-4 text-gray-400" />
           </td>
           <td class="px-1" :class="props.tdClass">
@@ -91,7 +77,7 @@
         </tr>
       </template>
     </t-table>
-  </table>
+  </div>
 </template>
 
 <script lang="js">
@@ -205,6 +191,8 @@ const data = [
     'paperclip', //Icon paperclip
     '' //Icon pen
   ]
+
+
 ]
 export default {
   data: () => ({

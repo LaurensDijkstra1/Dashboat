@@ -1,10 +1,14 @@
 <template>
-$END$
+  <expected-list />
 </template>
 
 <script>
+import ExpectedList from '~/components/ExpectedList'
+
 export default {
-name: "index"
+  components: {
+    ExpectedList
+  }
 }
 </script>
 

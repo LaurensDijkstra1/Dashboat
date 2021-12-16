@@ -13,7 +13,11 @@
     "
   >
     <section class="flex flex-row items-center space-x-4">
-      <p>Scheepshaven</p>
+      <p>
+        <nuxt-link to="/">
+          Scheepshaven
+        </nuxt-link>
+      </p>
 
       <t-select :options="['Eemshaven']" />
 
