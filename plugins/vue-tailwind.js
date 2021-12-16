@@ -68,7 +68,7 @@ const settings = {
       classes: {
         table:
           'min-w-full divide-y divide-gray-100 shadow-sm border-gray-200 border',
-        thead: 'bg-white divide-gray-200 text-left',
+        thead: 'bg-white divide-gray-200',
         theadTr: '',
         theadTh:
           'py-2 font-semibold text-left bg-white dark:bg-gray-600 border-b',

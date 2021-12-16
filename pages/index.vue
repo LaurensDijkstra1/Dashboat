@@ -6,7 +6,6 @@
         class=""
         variant="success"
         timeout="4000"
-        v-if="snackbarState"
         show
       >
         Positie toegevoegd
@@ -14,30 +13,27 @@
     </div>
     <div class="w-full">
       <div class="flex">
-        <div class="w-6/12">
+        <div class="w-6/12 pr-3">
           <in-port-list />
         </div>
 
-        <div class="w-6/12">
-          <property-window />
-          <position />
-          <t-button class="m-auto" variant="primary" @click="showAlert">
-            Add new position
-          </t-button>
+        <div class="w-6/12 pl-3">
+          <nuxt-child />
         </div>
       </div>
     </div>
+    <!--    <div class="absolute right-0 top-17 w-6/12 px-4">-->
+    <!--      <nuxt-child />-->
+    <!--    </div>-->
   </div>
 </template>
 
 <script>
-import InPortList from "~/components/InPortList";
-import PropertyWindow from "~/components/PropertyWindow";
-import Position from "~/components/Position";
+import InPortList from '~/components/InPortList'
 
 export default {
-  components: { InPortList, PropertyWindow, Position },
-  data() {
+  components: { InPortList },
+  data () {
     return {
       snackbarState: false,
     };

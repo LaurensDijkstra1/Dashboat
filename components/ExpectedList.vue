@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="font-bold">Expected</p>
+    <p class="font-bold pl-1 py-2">Expected</p>
 
     <t-table
       class="dark:bg-gray-800 border-none text-xs"
@@ -13,7 +13,7 @@
           <th
             v-for="(item, index) in props.data"
             :key="index"
-            :class="[props.thClass, item.icon ? 'px-1' : 'px-2']"
+            :class="[props.thClass, item.icon ? '' : '']"
           >
             <template v-if="item.text">
               {{ item.text }}
@@ -62,17 +62,17 @@
           <td :class="props.tdClass">
             <font-awesome-icon :icon="props.row[11]" class="m-1 w-1 text-gray-400" />
           </td>
-          <td class="px-1" :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[12]" class="m-1 w-4 text-gray-400" />
+          <td :class="props.tdClass">
+            <font-awesome-icon :icon="props.row[12]" class="m-1 w-4 text-green-400" />
           </td>
-          <td class="px-1" :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[13]" class="m-1 w-4 text-gray-400" />
+          <td :class="props.tdClass">
+            <font-awesome-icon :icon="props.row[13]" class="m-1 w-4 text-red-400" />
           </td>
-          <td class="px-1" :class="props.tdClass">
+          <td :class="props.tdClass">
             <font-awesome-icon :icon="props.row[14]" class="m-1 w-4 text-gray-400" />
           </td>
-          <td class="px-1" :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[15]" class="m-1 w-4 text-gray-400" />
+          <td :class="props.tdClass">
+            <font-awesome-icon :icon="props.row[15]" class="m-1 w-4 text-yellow-400" />
           </td>
         </tr>
       </template>
@@ -121,19 +121,19 @@ const headers = [
   },
   {
     icon: 'award',
-    color: 'black'
+    color: 'green'
   },
   {
     icon: 'recycle',
-    color: 'black'
+    color: 'red'
   },
   {
     icon: 'paperclip',
-    color: 'black'
+    color: 'gray'
   },
   {
     icon: 'pen',
-    color: 'black'
+    color: 'yellow'
   },
 ]
 const data = [
