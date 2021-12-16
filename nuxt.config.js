@@ -35,7 +35,6 @@ export default {
     '@nuxtjs/tailwindcss',
     // https://color-mode.nuxtjs.org
     '@nuxtjs/color-mode',
-    '@nuxtjs/svg'
   ],
 
   router: {
