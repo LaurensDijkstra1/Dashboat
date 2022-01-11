@@ -18,7 +18,9 @@
         </div>
 
         <div class="w-6/12 pl-3">
-          <nuxt-child />
+          <!-- <nuxt-child /> -->
+          <property-window />
+          <autonomouse-vessel-property />
         </div>
       </div>
     </div>
@@ -30,9 +32,11 @@
 
 <script>
 import InPortList from '~/components/InPortList'
+import PropertyWindow from '~/components/PropertyWindow'
+import AutonomouseVesselProperty from '~/components/AutonomouseVesselProperty'
 
 export default {
-  components: { InPortList },
+  components: { InPortList, PropertyWindow,AutonomouseVesselProperty },
   data () {
     return {
       snackbarState: false,
