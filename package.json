@@ -23,7 +23,6 @@
     "firebase": "^9.5.0",
     "nuxt": "^2.13.3",
     "vue-echarts": "^6.0.0",
-    "vue-speedometer": "^1.8.0",
     "vue-tailwind": "^2.5.0",
     "vue-tailwind-icons": "^0.1.2"
   },
