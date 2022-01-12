@@ -18,7 +18,9 @@
         </div>
 
         <div class="w-6/12 pl-3">
-          <nuxt-child />
+          <!-- <nuxt-child /> -->
+          <property-window />
+          <autonomouse-vessel-property />
         </div>
       </div>
     </div>
@@ -29,11 +31,11 @@
 </template>
 
 <script>
-import InPortList from '~/components/InPortList'
+import InPortList from "~/components/InPortList";
 
 export default {
   components: { InPortList },
-  data () {
+  data() {
     return {
       snackbarState: false,
     };
@@ -41,8 +43,8 @@ export default {
   methods: {
     showAlert() {
       // console.log("werkt het?");
-      this.snackbarState = true
+      this.snackbarState = true;
     },
   },
-}
+};
 </script>
