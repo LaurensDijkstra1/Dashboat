@@ -9,25 +9,33 @@
     >
       <template v-slot:thead="props">
         <thead :class="props.theadClass">
-        <tr :class="props.trClass">
-          <th
-            v-for="(item, index) in props.data"
-            :key="index"
-            :class="[props.thClass, item.icon ? '' : '']"
-          >
-            <template v-if="item.text">
-              {{ item.text }}
-            </template>
-            <font-awesome-icon v-else-if="item.icon" :icon="item.icon" :class="`text-${item.color}-400`" class="m-1 w-4" />
-          </th>
-        </tr>
+          <tr :class="props.trClass">
+            <th
+              v-for="(item, index) in props.data"
+              :key="index"
+              :class="[props.thClass, item.icon ? '' : '']"
+            >
+              <template v-if="item.text">
+                {{ item.text }}
+              </template>
+              <font-awesome-icon
+                v-else-if="item.icon"
+                :icon="item.icon"
+                :class="`text-${item.color}-400`"
+                class="m-1 w-4"
+              />
+            </th>
+          </tr>
         </thead>
       </template>
 
       <template slot="row" slot-scope="props">
         <tr class="dark:bg-gray-800 dark:border-none" :class="props.trClass">
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[0]" class="m-1 w-4 text-black-400" />
+            <font-awesome-icon
+              :icon="props.row[0]"
+              class="m-1 w-4 text-black-400"
+            />
           </td>
           <td :class="props.tdClass">
             {{ props.row[1] }}
@@ -60,19 +68,34 @@
             {{ props.row[10] }}
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[11]" class="m-1 w-1 text-gray-400" />
+            <font-awesome-icon
+              :icon="props.row[11]"
+              class="m-1 w-1 text-gray-400"
+            />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[12]" class="m-1 w-4 text-green-400" />
+            <font-awesome-icon
+              :icon="props.row[12]"
+              class="m-1 w-4 text-green-400"
+            />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[13]" class="m-1 w-4 text-red-400" />
+            <font-awesome-icon
+              :icon="props.row[13]"
+              class="m-1 w-4 text-red-400"
+            />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[14]" class="m-1 w-4 text-gray-400" />
+            <font-awesome-icon
+              :icon="props.row[14]"
+              class="m-1 w-4 text-gray-400"
+            />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[15]" class="m-1 w-4 text-yellow-400" />
+            <font-awesome-icon
+              :icon="props.row[15]"
+              class="m-1 w-4 text-yellow-400"
+            />
           </td>
         </tr>
       </template>
