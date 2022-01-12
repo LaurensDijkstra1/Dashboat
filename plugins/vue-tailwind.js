@@ -1,5 +1,5 @@
-import Vue from 'vue';
-import VueTailwind from 'vue-tailwind';
+import Vue from "vue";
+import VueTailwind from "vue-tailwind";
 
 import {
   TButton,
@@ -9,17 +9,17 @@ import {
   TInput,
   TTextarea,
   TAlert,
-} from 'vue-tailwind/dist/components';
+} from "vue-tailwind/dist/components";
 
 const settings = {
-  't-button': {
+  "t-button": {
     component: TButton,
     props: {
       fixedClasses:
-        'block px-4 py-1 transition duration-100 ease-in-out focus:border-blue-500 focus:ring-2 ' +
-        'focus:ring-blue-500 focus:outline-none focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed bg-gray-500' +
-        'shadow-sm rounded border border-gray-300',
-      classes: 'dark:bg-gray-500 dark:text-white',
+        "block px-4 py-1 transition duration-100 ease-in-out focus:border-blue-500 focus:ring-2 " +
+        "focus:ring-blue-500 focus:outline-none focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed bg-gray-500" +
+        "shadow-sm rounded border border-gray-300",
+      classes: "dark:bg-gray-500 dark:text-white",
       variants: {
         primary: "hover:bg-indigo-800 bg-indigo-700 border-none text-white",
         secondary: "text-gray-800 bg-gray-200 shadow-sm hover:text-gray-600",
@@ -62,53 +62,53 @@ const settings = {
     },
   },
 
-  't-table': {
+  "t-table": {
     component: TTable,
     props: {
       classes: {
         table:
-          'min-w-full divide-y divide-gray-100 shadow-sm border-gray-200 border',
-        thead: 'bg-white divide-gray-200',
-        theadTr: '',
+          "min-w-full divide-y divide-gray-100 shadow-sm border-gray-200 border",
+        thead: "bg-white divide-gray-200",
+        theadTr: "",
         theadTh:
-          'py-2 font-semibold text-left bg-white dark:bg-gray-600 border-b',
-        tbody: 'bg-white divide-y divide-gray-100',
-        th: 'py-3 text-left font-bold text-gray-800 uppercase tracking-wider',
-        tr: '',
-        td: 'py-2 whitespace-no-wrap',
-        tfoot: '',
-        tfootTr: '',
-        tfootTd: '',
+          "py-2 font-semibold text-left bg-white dark:bg-gray-600 border-b",
+        tbody: "bg-white divide-y divide-gray-100",
+        th: "py-3 text-left font-bold text-gray-800 uppercase tracking-wider",
+        tr: "bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:md:hover:bg-gray-400",
+        td: "py-2 whitespace-no-wrap",
+        tfoot: "",
+        tfootTr: "",
+        tfootTd: "",
       },
     },
   },
 
-  't-input': {
+  "t-input": {
     component: TInput,
     props: {
       fixedClasses:
-        'block w-full px-3 py-2 transition duration-100 ease-in-out border rounded shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed',
+        "block w-full px-3 py-2 transition duration-100 ease-in-out border rounded shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed",
       classes:
-        'text-black placeholder-gray-400 bg-white border-gray-300 focus:border-blue-500 ',
+        "text-black placeholder-gray-400 bg-white border-gray-300 focus:border-blue-500 ",
       variants: {
-        danger: 'border-red-300 bg-red-50 placeholder-red-200 text-red-900',
+        danger: "border-red-300 bg-red-50 placeholder-red-200 text-red-900",
         success:
-          'border-green-300 bg-green-50 placeholder-gray-400 text-green-900',
+          "border-green-300 bg-green-50 placeholder-gray-400 text-green-900",
       },
     },
   },
 
-  't-textarea': {
+  "t-textarea": {
     component: TTextarea,
     props: {
       fixedClasses:
-        'block w-full px-3 py-2 transition duration-100 ease-in-out border rounded shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed',
+        "block w-full px-3 py-2 transition duration-100 ease-in-out border rounded shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed",
       classes:
-        'text-black placeholder-gray-400 bg-white border-gray-300 focus:border-blue-500 ',
+        "text-black placeholder-gray-400 bg-white border-gray-300 focus:border-blue-500 ",
       variants: {
-        danger: 'border-red-300 bg-red-50 placeholder-red-200 text-red-900',
+        danger: "border-red-300 bg-red-50 placeholder-red-200 text-red-900",
         success:
-          'border-green-300 bg-green-50 placeholder-gray-400 text-green-900',
+          "border-green-300 bg-green-50 placeholder-gray-400 text-green-900",
       },
     },
   },
