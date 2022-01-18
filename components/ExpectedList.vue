@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{vessels}}
     <p class="font-bold pl-1 py-2">Expected</p>
 
     <t-table
@@ -81,6 +82,8 @@
 </template>
 
 <script lang="js">
+import { mapGetters } from "vuex";
+
 const headers = [
   {
     icon: 'ship',
@@ -199,5 +202,10 @@ export default {
     headers,
     data
   }),
+  computed: {
+    ...mapGetters({
+      vessels: 'expectedVessels/get',
+    }),
+  },
 }
 </script>

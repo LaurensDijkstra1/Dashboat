@@ -12,10 +12,11 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      // gray: colors.trueGray,
       indigo: colors.indigo,
       red: colors.rose,
       yellow: colors.amber,
+      green: colors.green,
+      blue: colors.blue,
 
       // Custom Colors
       gray: {
@@ -28,9 +29,6 @@ module.exports = {
         700: '#282828',
         800: '#1C1C1C',
         900: '#161616',
-      },
-      green: {
-        400: '#34D399'
       }
     }
   },
