@@ -74,22 +74,24 @@
       <t-select :options="['In Port - Expected']" />
     </section>
 
-    <t-button
-      class="font-bold"
-      variant="primary"
-      @click="
+    <div class="flex">
+      <t-button
+        class="font-bold mr-2"
+        variant="primary"
+        @click="
         $colorMode.preference = $colorMode.value === 'light' ? 'dark' : 'light'
       "
-    >
-      {{ $colorMode.value === "light" ? "Night Mode" : "Day Mode" }}
-    </t-button>
-    <t-button
-      class="font-bold"
-      variant="primary"
-      @click="$router.push('/logout')"
-    >
-      Logout
-    </t-button>
+      >
+        {{ $colorMode.value === "light" ? "Night Mode" : "Day Mode" }}
+      </t-button>
+      <t-button
+        class="font-bold"
+        variant="primary"
+        @click="$router.push('/logout')"
+      >
+        Logout
+      </t-button>
+    </div>
   </header>
 </template>
 
