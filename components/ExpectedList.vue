@@ -25,7 +25,7 @@
       </template>
 
       <template slot="row" slot-scope="props">
-        <tr class="dark:bg-gray-800 dark:border-none" :class="props.trClass">
+        <tr class="dark:bg-gray-800 dark:border-none" :class="props.trClass" @click="openPropertyWindow(props.row.id)">
           <td :class="props.tdClass">
             <font-awesome-icon :icon="getVesselTypeIcon(props.row.type)" class="m-1 w-4 text-black-400" />
           </td>
@@ -162,6 +162,9 @@ export default {
         case SAV:
           return 'wifi'
       }
+    },
+    openPropertyWindow(id) {
+      this.$router.push({ path: `/${id}` })
     }
   },
   filters: {

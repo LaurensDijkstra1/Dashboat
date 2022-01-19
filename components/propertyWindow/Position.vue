@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4 px-8 bg-white dark:bg-gray-600 dark:border-none">
+  <div class="py-4 px-8 bg-gray-100 dark:bg-gray-700 dark:border-none">
     <div class="w-full flex mb-4">
       <!-- <div class="w-1/12">
         <h1></h1>

@@ -15,16 +15,8 @@ export default {
   },
   mounted() {
     this.generateVessels()
-
     const vesselLists = this.getIdLists
-
-    console.log('test')
-    console.log(vesselLists)
-    console.log(vesselLists[0])
-    console.log(vesselLists[1])
-
     this.setInPortVessels(vesselLists[0])
-
     this.setExpectedVessels(vesselLists[1])
   },
 }

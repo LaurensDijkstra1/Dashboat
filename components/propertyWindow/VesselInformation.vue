@@ -1,34 +1,5 @@
 <template>
   <div class="w-full">
-    <div
-      class="
-        py-4
-        px-8
-        bg-white
-        shadow-lg
-        rounded-t-lg
-        dark:bg-gray-800 dark:border-none
-      "
-    >
-      <h1>Inland Vessel Visit - Van der Veen shipping - Expected</h1>
-    </div>
-    <div
-      class="
-        space-x-4
-        py-4
-        px-8
-        bg-gray-100
-        flex
-        border
-        dark:border-gray-300 dark:bg-gray-800
-      "
-    >
-      <t-button variant="primary">Save & Quit </t-button>
-      <t-button class="bg-white">Save & New </t-button>
-      <t-button class="bg-white">Use Defaults </t-button>
-      <t-button class="bg-white">Reset </t-button>
-      <t-button class="bg-white">Quit </t-button>
-    </div>
     <div class="py-4 px-8 bg-white dark:bg-gray-600 dark:border-none">
       <div class="w-full flex">
         <div class="w-1/12">
@@ -44,10 +15,10 @@
           <t-select class="mb-4" :options="['VVS', '-']" />
           <div class="flex">
             <div class="w-6/12">
-              <p>6.88m</p>
-              <p>4.45m</p>
-              <p>3038 T</p>
-              <p>Yes</p>
+              <p>{{ `${vessel.loa}m` }}</p>
+              <p>{{ `${vessel.boa}m` }}</p>
+              <p>{{ `${vessel.cargo}m` }}</p>
+              <p>{{ vessel.autopilot ? 'Yes' : 'No' }}</p>
             </div>
             <div class="w-6/12 text-gray-400">
               <p>Flag</p>
@@ -57,11 +28,11 @@
               <p>MMSI</p>
             </div>
             <div class="w-6/12">
-              <p>6.88m</p>
-              <p>4.45m</p>
-              <p>3038 T</p>
-              <p>Yes</p>
-              <p>-</p>
+              <p>{{ vessel.flag }}</p>
+              <p>{{ vessel.phone }}</p>
+              <p>{{ vessel.debtor }}</p>
+              <p></p>
+              <p></p>
             </div>
           </div>
         </div>
@@ -75,7 +46,7 @@
         </div>
       </div>
     </div>
-    <div class="py-4 px-8 bg-grey-100">
+    <div class="py-4 px-8 bg-grey-100 dark:bg-gray-700">
       <div class="w-full flex">
         <div class="w-1/12">
           <h1>Vessel</h1>
@@ -96,3 +67,16 @@
     </div>
   </div>
 </template>
+
+<script>
+const props = {
+  vessel: {
+    type: Object,
+    required: true,
+  }
+}
+
+export default {
+  props
+}
+</script>

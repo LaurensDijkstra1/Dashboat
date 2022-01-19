@@ -12,6 +12,10 @@ export const state = () => ({
 })
 
 export const getters = {
+  getVesselById: (state) => (id) => {
+    return state.vessels.find(vessel => vessel.id === id)
+  },
+
   getExpectedVessels: (state) => {
     let vessels = []
     state.expectedVesselIds.forEach((id) => {
@@ -60,9 +64,6 @@ export const mutations = {
         state.inPortVesselsIds.push(id)
       })
     }
-    console.log('abcd')
-    console.log(ids)
-    // state.inPortVesselsIds = ids
   },
 
   setExportedVesselIds(state, ids) {
@@ -71,9 +72,6 @@ export const mutations = {
         state.expectedVesselIds.push(id)
       })
     }
-    console.log('xyz')
-    console.log(ids)
-    // state.expectedVesselIds = ids
   }
 }
 
@@ -104,7 +102,14 @@ function generateVessel() {
 
     // Property window
     cargo:      Faker.number(0, 4000),
-    autopilot: Faker.boolean(),
+    autopilot:  Faker.boolean(),
+    flag:       Faker.array(['Netherlands', 'Belgium', 'Germany', 'Friesland']),
+    phone:      `+06${Faker.number(10000000, 99999999)}`,
+    debtor:     Faker.number(100000, 999999),
 
+    // Autonomous vessel
+    speed:          Faker.number(1, 25),
+    rudder:         `${Faker.boolean() ? '' : '-'}${Faker.number(0, 45)}`,
+    turningCircle:  Faker.number(20, 50),
   }
 }
