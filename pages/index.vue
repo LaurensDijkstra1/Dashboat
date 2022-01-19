@@ -35,7 +35,7 @@ import dummyData from '~/mixins/dummyData'
 
 export default {
   components: { InPortList },
-  data () {
+  data() {
     return {
       snackbarState: false,
     };
@@ -44,7 +44,7 @@ export default {
   methods: {
     showAlert() {
       // console.log("werkt het?");
-      this.snackbarState = true
+      this.snackbarState = true;
     },
   },
   computed: {
