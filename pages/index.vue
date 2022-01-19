@@ -31,6 +31,7 @@
 <script>
 import InPortList from '~/components/InPortList'
 import { mapGetters, mapMutations } from 'vuex'
+import dummyData from '~/mixins/dummyData'
 
 export default {
   components: { InPortList },
@@ -39,31 +40,17 @@ export default {
       snackbarState: false,
     };
   },
+  mixins: [dummyData],
   methods: {
     showAlert() {
       // console.log("werkt het?");
       this.snackbarState = true
     },
-    ...mapMutations({
-      generateVessels: 'vessels/generate',
-      setInPortVessels: 'expectedVessels/set',
-      setExpectedVessels: 'expectedVessels/set',
-    })
   },
   computed: {
     ...mapGetters({
-      vessels: 'vessels/getExpectedVessels',
       getIdLists: 'vessels/getIdLists',
-    }),
-  },
-  mounted() {
-    this.generateVessels()
-
-    const inPortVessels = this.getIdLists[0]
-    this.setInPortVessels(inPortVessels)
-
-    const expectedVessels = this.getIdLists[1]
-    this.setExpectedVessels(expectedVessels)
+    })
   }
 }
 </script>

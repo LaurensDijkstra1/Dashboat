@@ -1,4 +1,6 @@
-export const state = () => ([])
+export const state = () => ({
+  list: []
+})
 
 export const getters = {
   get: (state) => {
@@ -8,7 +10,11 @@ export const getters = {
 
 export const mutations = {
   set(state, ids) {
-    state = ids
+    if (state.length === 0) {
+      ids.forEach((id) => {
+        state.push(id)
+      })
+    }
   }
 }
 

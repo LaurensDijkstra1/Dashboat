@@ -5,7 +5,7 @@
     <t-table
       class="dark:bg-gray-800 border-none text-xs"
       :headers="headers"
-      :data="data"
+      :data="inPortVessels"
     >
       <template v-slot:thead="props">
         <thead :class="props.theadClass">
@@ -27,52 +27,52 @@
       <template slot="row" slot-scope="props">
         <tr class="dark:bg-gray-800 dark:border-none" :class="props.trClass">
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[0]" class="m-1 w-4 text-black-400" />
+            <font-awesome-icon :icon="getVesselTypeIcon(props.row.type)" class="m-1 w-4 text-black-400" />
           </td>
           <td :class="props.tdClass">
-            {{ props.row[1] }}
+            {{ props.row.eta }}
           </td>
           <td :class="props.tdClass">
-            {{ props.row[2] }}
+            {{ props.row.name | uppercase }}
           </td>
           <td :class="props.tdClass">
-            {{ props.row[3] }}
+            {{ props.row.berth | uppercase }}
           </td>
           <td :class="props.tdClass">
-            {{ props.row[4] }}
+            {{ props.row.mooring }}
           </td>
           <td :class="props.tdClass">
-            {{ props.row[5] }}
+            {{ props.row.b }}
           </td>
           <td :class="props.tdClass">
-            {{ props.row[6] }}
+            {{ props.row.t }}
           </td>
           <td :class="props.tdClass">
-            {{ props.row[7] }}
+            {{ props.row.p }}
           </td>
           <td :class="props.tdClass">
-            {{ props.row[8] }}
+            {{ props.row.loa }}
           </td>
           <td :class="props.tdClass">
-            {{ props.row[9] }}
+            {{ props.row.boa }}
           </td>
           <td :class="props.tdClass">
-            {{ props.row[10] }}
+            {{ props.row.draft }}
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[11]" class="m-1 w-1 text-gray-400" />
+            <font-awesome-icon v-if="props.row.h" icon="exclamation" class="m-1 w-1 text-gray-400" />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[12]" class="m-1 w-4 text-green-400" />
+            <font-awesome-icon v-if="props.row.award" icon="award" class="m-1 w-4 text-green-400" />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[13]" class="m-1 w-4 text-red-400" />
+            <font-awesome-icon v-if="props.row.recycle" icon="recycle" class="m-1 w-4 text-red-400" />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[14]" class="m-1 w-4 text-gray-400" />
+            <font-awesome-icon v-if="props.row.paperclip" icon="paperclip" class="m-1 w-4 text-gray-400" />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="props.row[15]" class="m-1 w-4 text-yellow-400" />
+            <font-awesome-icon v-if="props.row.edit" icon="pen" class="m-1 w-4 text-yellow-400" />
           </td>
         </tr>
       </template>
@@ -81,6 +81,8 @@
 </template>
 
 <script lang="js">
+import {mapGetters} from "vuex";
+
 const headers = [
   {
     icon: 'ship',
@@ -136,68 +138,38 @@ const headers = [
     color: 'yellow'
   },
 ]
-const data = [
-  [
-    'wifi', //Type
-    '14-12 21:00', //ETA
-    'POLLUX', //Vessel
-    'DSNEH', //Berth
-    '? ? S', //Mooring
-    '', //B
-    '2', //T
-    'P', //P
-    '28.47', //LOA
-    '8.36', //BOA
-    '5.00', //Draft
-    'exclamation', //H, Icon exlamation
-    '', //Icon award
-    'recycle', //Icon recycle
-    '', //Icon paperclip
-    'pen' //Icon pen
-  ],
-  [
-    'laptop', //Type
-    '30-09 11:00', //ETA
-    'CEASAR', //Vessel
-    'JMLNE', //Berth
-    '? ? U', //Mooring
-    '', //B
-    '', //T
-    '', //P
-    '22.70', //LOA
-    '5.54', //BOA
-    '2.00', //Draft
-    '', //H, Icon exlamation
-    'award', //Icon award
-    '', //Icon recycle
-    'paperclip', //Icon paperclip
-    '' //Icon pen
-  ],
-  [
-    'dharmachakra', //Type
-    '30-09 11:00', //ETA
-    'CEASAR', //Vessel
-    'JMLNE', //Berth
-    '? ? U', //Mooring
-    '', //B
-    '', //T
-    '', //P
-    '22.70', //LOA
-    '5.54', //BOA
-    '2.00', //Draft
-    '', //H, Icon exlamation
-    'award', //Icon award
-    '', //Icon recycle
-    'paperclip', //Icon paperclip
-    '' //Icon pen
-  ]
 
-
-]
 export default {
   data: () => ({
     headers,
-    data
   }),
+  computed: {
+    ...mapGetters({
+      inPortVessels: 'vessels/getInPortVessels',
+    }),
+  },
+  methods: {
+    getVesselTypeIcon(type) {
+      const V   = 'vessel'
+      const AV  = 'autonomous vessel'
+      const SAV  = 'semi autonomous vessel'
+
+      switch (type) {
+        case V:
+          return 'dharmachakra'
+        case AV:
+          return 'laptop'
+        case SAV:
+          return 'wifi'
+      }
+    }
+  },
+  filters: {
+    uppercase: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      return value.toUpperCase()
+    }
+  }
 }
 </script>
