@@ -14,9 +14,9 @@
       </div>
     </div>
 
-    <vessel-information v-if="vessel !== null" :vessel="vessel" />
+    <vessel-information />
 
-    <autonomous-vessel-property v-if="isAutonomousVessel && vessel !== null" :vessel="vessel" />
+    <autonomous-vessel-property v-if="isAutonomousVessel" />
 
     <position />
 

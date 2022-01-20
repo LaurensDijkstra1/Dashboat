@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div v-if="vessel !== null" class="w-full">
     <div class="py-4 px-8 bg-white dark:bg-gray-600 dark:border-none">
       <div class="w-full flex">
         <div class="w-1/12">
@@ -69,14 +69,9 @@
 </template>
 
 <script>
-const props = {
-  vessel: {
-    type: Object,
-    required: true,
-  }
-}
+import propertyWindow from '~/mixins/propertyWindow'
 
 export default {
-  props
+  mixins: [propertyWindow]
 }
 </script>
