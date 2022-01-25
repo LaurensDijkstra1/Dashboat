@@ -64,19 +64,19 @@
             {{ props.row.draft }}
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon v-if="props.row.h" icon="exclamation" class="m-1 w-1.5" :class="isAutonomous(props.row.type) ? 'text-gray-700 dark:text-white': 'text-gray-400'" />
+            <font-awesome-icon v-if="props.row.h" icon="exclamation" class="m-1 w-1.5" :class="getIconColor(props.row.type,'gray')" />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon v-if="props.row.award" icon="award" class="m-1 w-3" :class="isAutonomous(props.row.type) ? 'text-gray-700 dark:text-white': 'text-green-400'" />
+            <font-awesome-icon v-if="props.row.award" icon="award" class="m-1 w-3" :class="getIconColor(props.row.type,'green')" />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon v-if="props.row.recycle" icon="recycle" class="m-1 w-4" :class="isAutonomous(props.row.type) ? 'text-gray-700 dark:text-white': 'text-red-400'" />
+            <font-awesome-icon v-if="props.row.recycle" icon="recycle" class="m-1 w-4" :class="getIconColor(props.row.type,'red')" />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon v-if="props.row.paperclip" icon="paperclip" class="m-1 w-3.5" :class="isAutonomous(props.row.type) ? 'text-gray-700 dark:text-white': 'text-gray-400'" />
+            <font-awesome-icon v-if="props.row.paperclip" icon="paperclip" class="m-1 w-3.5" :class="getIconColor(props.row.type,'gray')" />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon v-if="props.row.edit" icon="pen" class="m-1 w-3.5" :class="isAutonomous(props.row.type) ? 'text-gray-700 dark:text-white': 'text-yellow-400'" />
+            <font-awesome-icon v-if="props.row.edit" icon="pen" class="m-1 w-3.5" :class="getIconColor(props.row.type,'yellow')" />
           </td>
         </tr>
       </template>
@@ -190,6 +190,11 @@ export default {
     },
     isAutonomous(type) {
       return type === SAV || type === AV
+    },
+    getIconColor(type, color) {
+      return this.isAutonomous(type) && this.getColorMethod === ROW_COLORED ?
+        'text-gray-700 dark:text-white':
+        `text-${color}-400`
     }
   },
   filters: {
