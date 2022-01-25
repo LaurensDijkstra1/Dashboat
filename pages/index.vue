@@ -54,3 +54,39 @@ export default {
   }
 }
 </script>
+
+<style>
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+}
+
+.bg-yellow-400 {
+  --tw-bg-opacity: 1;
+  background-color: #fbbf24;
+}
+
+.bg-green-400 {
+  --tw-bg-opacity: 1;
+  background-color: #4ade80;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-red-400 {
+  --tw-bg-opacity: 1;
+  color: rgba(248, 113, 113, var(--tw-bg-opacity));
+}
+
+.text-yellow-400 {
+  --tw-bg-opacity: 1;
+  color: #fbbf24;
+}
+
+.text-green-400 {
+  --tw-bg-opacity: 1;
+  color: #4ade80;
+}
+</style>
