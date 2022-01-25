@@ -71,12 +71,14 @@
 
       <t-button class="text-sm" value="primary"> Reset </t-button>
 
-      <t-select :options="['In Port - Expected']" />
+      <t-button class="text-sm" value="primary" @click="setColorMethod">
+        {{ getColorMethod ===  ICON_COLORED ? 'Icon' : 'Row' }}
+      </t-button>
     </section>
 
     <div class="flex">
       <t-button
-        class="font-bold mr-2"
+        class="font-bold mr-2 no-enter"
         variant="primary"
         @click="
           $colorMode.preference = $colorMode.value === 'light' ? 'dark' : 'light'
@@ -85,7 +87,7 @@
         {{ $colorMode.value === "light" ? "Night Mode" : "Day Mode" }}
       </t-button>
       <t-button
-        class="font-bold"
+        class="font-bold no-enter"
         variant="primary"
         @click="$router.push('/logout')"
       >
@@ -96,7 +98,30 @@
 </template>
 
 <script>
-export default {};
+import {mapGetters, mapMutations} from "vuex";
+import { ICON_COLORED, ROW_COLORED } from '~/store/filter'
+
+export default {
+  data: () => ({
+    ICON_COLORED,
+    ROW_COLORED,
+  }),
+  computed: {
+    ...mapGetters({
+      getColorMethod: 'filter/getColorMethod'
+    })
+  },
+  methods: {
+    ...mapMutations({
+      setColorMethod: 'filter/toggleColorMethod',
+    }),
+  }
+}
 </script>
 
-<style scoped></style>
+<style>
+.no-enter {
+  overflow: hidden;
+  white-space: nowrap;
+}
+</style>

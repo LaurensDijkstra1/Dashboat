@@ -52,7 +52,7 @@ export const getters = {
 export const mutations = {
   generate(state) {
     if (state.vessels.length === 0) {
-      for (let i = 0; i < Faker.number(5, 10); i++) {
+      for (let i = 0; i < Faker.number(6, 12); i++) {
         state.vessels.push(generateVessel())
       }
     }

@@ -74,7 +74,7 @@ const settings = {
           "py-2 font-semibold text-left bg-white dark:bg-gray-600 border-b",
         tbody: "bg-white divide-y divide-gray-100",
         th: "py-3 text-left font-bold text-gray-800 uppercase tracking-wider",
-        tr: "bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:md:hover:bg-gray-400",
+        tr: "bg-gray-100 hover:bg-gray-200 dark:md:hover:bg-gray-400",
         td: "py-2 whitespace-no-wrap",
         tfoot: "",
         tfootTr: "",

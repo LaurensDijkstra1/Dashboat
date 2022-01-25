@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <p class="font-bold pl-1 py-2">Expected</p>
+  <div class="dark:bg-gray-700 rounded">
+    <p class="font-bold pl-2 py-2">Exprected</p>
 
     <t-table
       class="dark:bg-gray-800 border-none text-xs"
@@ -25,9 +25,13 @@
       </template>
 
       <template slot="row" slot-scope="props">
-        <tr class="dark:bg-gray-800 dark:border-none" :class="props.trClass" @click="openPropertyWindow(props.row.id)">
+        <tr class="cursor-pointer"
+            :class="[getTRBackgroundColorClass(props.row.type), props.trClass]"
+            @click="openPropertyWindow(props.row.id)">
           <td :class="props.tdClass">
-            <font-awesome-icon :icon="getVesselTypeIcon(props.row.type)" class="m-1 w-4 text-black-400" />
+            <font-awesome-icon
+              :icon="getVesselTypeIcon(props.row.type)" class="m-1 w-4 pl-0.5"
+              :class="getColorMethod === ICON_COLORED ? `text-${getColor(props.row.type)}-400` : ''" />
           </td>
           <td :class="props.tdClass">
             {{ props.row.eta }}
@@ -60,19 +64,19 @@
             {{ props.row.draft }}
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon v-if="props.row.h" icon="exclamation" class="m-1 w-1 text-gray-400" />
+            <font-awesome-icon v-if="props.row.h" icon="exclamation" class="m-1 w-1.5" :class="isAutonomous(props.row.type) ? 'text-gray-700 dark:text-white': 'text-gray-400'" />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon v-if="props.row.award" icon="award" class="m-1 w-4 text-green-400" />
+            <font-awesome-icon v-if="props.row.award" icon="award" class="m-1 w-3" :class="isAutonomous(props.row.type) ? 'text-gray-700 dark:text-white': 'text-green-400'" />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon v-if="props.row.recycle" icon="recycle" class="m-1 w-4 text-red-400" />
+            <font-awesome-icon v-if="props.row.recycle" icon="recycle" class="m-1 w-4" :class="isAutonomous(props.row.type) ? 'text-gray-700 dark:text-white': 'text-red-400'" />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon v-if="props.row.paperclip" icon="paperclip" class="m-1 w-4 text-gray-400" />
+            <font-awesome-icon v-if="props.row.paperclip" icon="paperclip" class="m-1 w-3.5" :class="isAutonomous(props.row.type) ? 'text-gray-700 dark:text-white': 'text-gray-400'" />
           </td>
           <td :class="props.tdClass">
-            <font-awesome-icon v-if="props.row.edit" icon="pen" class="m-1 w-4 text-yellow-400" />
+            <font-awesome-icon v-if="props.row.edit" icon="pen" class="m-1 w-3.5" :class="isAutonomous(props.row.type) ? 'text-gray-700 dark:text-white': 'text-yellow-400'" />
           </td>
         </tr>
       </template>
@@ -81,12 +85,16 @@
 </template>
 
 <script lang="js">
-import { mapGetters } from "vuex";
+import {mapGetters, mapMutations} from "vuex";
+import {
+  ICON_COLORED, ROW_COLORED,
+  AV_COLOR, SAV_COLOR,
+  V, AV, SAV
+} from '~/store/filter'
 
 const headers = [
   {
-    icon: 'ship',
-    color: 'black'
+    text: '',
   },
   {
     text: 'ETA',
@@ -142,18 +150,17 @@ const headers = [
 export default {
   data: () => ({
     headers,
+    ICON_COLORED,
+    ROW_COLORED,
   }),
   computed: {
     ...mapGetters({
-      expectedVessels: 'vessels/getExpectedVessels'
+      expectedVessels: 'vessels/getExpectedVessels',
+      getColorMethod: 'filter/getColorMethod',
     }),
   },
   methods: {
     getVesselTypeIcon(type) {
-      const V   = 'vessel'
-      const AV  = 'autonomous vessel'
-      const SAV  = 'semi autonomous vessel'
-
       switch (type) {
         case V:
           return 'dharmachakra'
@@ -165,6 +172,24 @@ export default {
     },
     openPropertyWindow(id) {
       this.$router.push({ path: `/${id}` })
+    },
+    getColor(type) {
+      switch (type) {
+        case AV:
+          return AV_COLOR
+        case SAV:
+          return SAV_COLOR
+        default:
+          return ''
+      }
+    },
+    getTRBackgroundColorClass(type) {
+      return this.isAutonomous(type) && this.getColorMethod === ROW_COLORED
+        ? `bg-${this.getColor(type)}-400 dark:bg-${this.getColor(type)}-400`
+        : 'dark:bg-gray-600'
+    },
+    isAutonomous(type) {
+      return type === SAV || type === AV
     }
   },
   filters: {

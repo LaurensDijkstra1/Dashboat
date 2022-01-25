@@ -1,5 +1,5 @@
 <template>
-  <div v-if="vessel !== null">
+  <div v-if="vessel !== null && isAutonomous(vessel.type)">
     <div class="dark:bg-gray-600 py-4 px-8">
       <h1 class="text-lg"> Autonomous vessel properties </h1>
 
@@ -25,8 +25,14 @@
 
 <script>
 import propertyWindow from '~/mixins/propertyWindow'
+import { AV, SAV } from '~/store/filter'
 
 export default {
-  mixins: [propertyWindow]
+  mixins: [propertyWindow],
+  methods: {
+    isAutonomous(type) {
+      return type === SAV || type === AV
+    }
+  },
 }
 </script>

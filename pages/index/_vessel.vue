@@ -16,7 +16,7 @@
 
     <vessel-information />
 
-    <autonomous-vessel-property v-if="isAutonomousVessel" />
+    <autonomous-vessel-property />
 
     <position />
 
@@ -30,41 +30,13 @@
 import Position from '~/components/propertyWindow/Position'
 import AutonomousVesselProperty from '~/components/propertyWindow/AutonomousVesselProperty'
 import VesselInformation from '~/components/propertyWindow/VesselInformation'
-import {mapGetters} from "vuex";
 
 export default {
-  data() {
-    return {
-      vessel: null
-    };
-  },
-  computed: {
-    ...mapGetters({
-      getVesselById: 'vessels/getVesselById',
-    }),
-  },
-  created() {
-    const vessel = this.getVesselById(parseInt(this.$route.params.vessel))
 
-    if (vessel === undefined || vessel === null) {
-      this.$router.push({ name: 'index' })
-    } else {
-      this.vessel = vessel
-    }
-  },
   components: {
     VesselInformation,
     Position,
     AutonomousVesselProperty
-  },
-  methods: {
-    isAutonomousVessel() {
-      const V   = 'vessel'
-      const AV  = 'autonomous vessel'
-      const SAV  = 'semi autonomous vessel'
-
-      return this.vessel.type === AV || this.vessel.type === SAV
-    },
   },
 }
 </script>
