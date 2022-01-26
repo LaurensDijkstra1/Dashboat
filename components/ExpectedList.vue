@@ -31,36 +31,37 @@
           <td :class="props.tdClass">
             <font-awesome-icon
               :icon="getVesselTypeIcon(props.row.type)" class="m-1 w-4 pl-0.5"
-              :class="getColorMethod === ICON_COLORED ? `text-${getColor(props.row.type)}-400` : ''" />
+              :class="[getColorMethod === ICON_COLORED ? `text-${getColor(props.row.type)}-400` : '',
+              getColorMethod === ROW_COLORED && isAutonomous(props.row.type) ? 'dark:text-gray-500' : '']" />
           </td>
-          <td :class="props.tdClass">
+          <td :class="[props.tdClass, isAutonomous(props.row.type) ? 'dark:text-gray-500' : '']">
             {{ props.row.eta }}
           </td>
-          <td :class="props.tdClass">
+          <td :class="[props.tdClass, isAutonomous(props.row.type) ? 'dark:text-gray-500' : '']">
             {{ props.row.name | uppercase }}
           </td>
-          <td :class="props.tdClass">
+          <td :class="[props.tdClass, isAutonomous(props.row.type) ? 'dark:text-gray-500' : '']">
             {{ props.row.berth | uppercase }}
           </td>
-          <td :class="props.tdClass">
+          <td :class="[props.tdClass, isAutonomous(props.row.type) ? 'dark:text-gray-500' : '']">
             {{ props.row.mooring }}
           </td>
-          <td :class="props.tdClass">
+          <td :class="[props.tdClass, isAutonomous(props.row.type) ? 'dark:text-gray-500' : '']">
             {{ props.row.b }}
           </td>
-          <td :class="props.tdClass">
+          <td :class="[props.tdClass, isAutonomous(props.row.type) ? 'dark:text-gray-500' : '']">
             {{ props.row.t }}
           </td>
-          <td :class="props.tdClass">
+          <td :class="[props.tdClass, isAutonomous(props.row.type) ? 'dark:text-gray-500' : '']">
             {{ props.row.p }}
           </td>
-          <td :class="props.tdClass">
+          <td :class="[props.tdClass, isAutonomous(props.row.type) ? 'dark:text-gray-500' : '']">
             {{ props.row.loa }}
           </td>
-          <td :class="props.tdClass">
+          <td :class="[props.tdClass, isAutonomous(props.row.type) ? 'dark:text-gray-500' : '']">
             {{ props.row.boa }}
           </td>
-          <td :class="props.tdClass">
+          <td :class="[props.tdClass, isAutonomous(props.row.type) ? 'dark:text-gray-500' : '']">
             {{ props.row.draft }}
           </td>
           <td :class="props.tdClass">
@@ -193,7 +194,7 @@ export default {
     },
     getIconColor(type, color) {
       return this.isAutonomous(type) && this.getColorMethod === ROW_COLORED ?
-        'text-gray-700 dark:text-white':
+        'text-gray-700 dark:text-gray-500':
         `text-${color}-400`
     }
   },

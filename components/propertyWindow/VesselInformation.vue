@@ -9,6 +9,7 @@
             <p>BOA</p>
             <p>Cargo</p>
             <p>Autopilot</p>
+            <p>Hazardous</p>
           </div>
         </div>
         <div class="w-5/12 ml-8">
@@ -17,8 +18,9 @@
             <div class="w-6/12">
               <p>{{ `${vessel.loa}m` }}</p>
               <p>{{ `${vessel.boa}m` }}</p>
-              <p>{{ `${vessel.cargo}m` }}</p>
+              <p>{{ `${vessel.cargo}T` }}</p>
               <p>{{ vessel.autopilot ? 'Yes' : 'No' }}</p>
+              <p>{{ vessel.hazardous }}</p>
             </div>
             <div class="w-6/12 text-gray-400">
               <p>Flag</p>

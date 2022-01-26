@@ -103,6 +103,7 @@ function generateVessel() {
     // Property window
     cargo:      Faker.number(0, 4000),
     autopilot:  Faker.boolean(),
+    hazardous:  Faker.array(['Yes', 'No']),
     flag:       Faker.array(['Netherlands', 'Belgium', 'Germany', 'Friesland']),
     phone:      `+06${Faker.number(10000000, 99999999)}`,
     debtor:     Faker.number(100000, 999999),
