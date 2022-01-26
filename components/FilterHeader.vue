@@ -72,7 +72,7 @@
       <t-button class="text-sm" value="primary"> Reset </t-button>
 
       <t-button class="text-sm" value="primary" @click="setColorMethod">
-        {{ getColorMethod ===  ICON_COLORED ? 'Icon' : 'Row' }}
+        {{ getColorMethod ===  ICON_COLORED ? 'Row' : 'Icon' }}
       </t-button>
     </section>
 

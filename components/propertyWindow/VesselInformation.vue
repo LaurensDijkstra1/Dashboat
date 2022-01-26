@@ -40,7 +40,7 @@
           <h1 class="mb-6">Motorvrachtschip</h1>
           <t-textarea
             class="h-32 dark:bg-gray-800 dark:border-none"
-            placeholder="Pernament ship remarkts "
+            placeholder="Permanent ship remarks "
             name="my-textarea"
           />
         </div>
@@ -59,7 +59,7 @@
         <div class="w-6/12">
           <t-textarea
             class="ml-6 h-32 dark:bg-gray-600 dark:border-none"
-            placeholder="Visit remarkts"
+            placeholder="Visit remarks"
             name="my-textarea"
           />
         </div>
